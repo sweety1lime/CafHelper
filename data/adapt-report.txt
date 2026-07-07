@@ -1,0 +1,1496 @@
+
+=== newyork: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:4 remapped:1 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ~ lawyer-detention-grounds   confident:2 remapped:3 unresolved:0
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:3 remapped:0 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ~ bribe-offer                confident:5 remapped:2 unresolved:0
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:3 unresolved:2
+  ✗ traffic-stop               confident:2 remapped:4 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ~ suspect-escape             confident:5 remapped:1 unresolved:0
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 3.3: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 12.8: remapped — 12.8 -> 12.9 (56%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (77%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (70%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «★★★★ [Федеральная/Региональная] Незаконные приобре»
+  criminal 5.7: unresolved — лучшее 24%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (41%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: remapped — 15.8 -> 17.4 (68%) «★★★ [Федеральная/Региональная] Провокация гос»
+  criminal 17.8: unresolved — лучшее 21%
+  criminal 5.8: unresolved — лучшее 28%
+  criminal 5.9: remapped — 5.9 -> 9.1 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 17%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (81%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 21%
+  criminal 9.4: remapped — 9.4 -> 41 (67%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 41 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 26%
+  procedural 28: remapped — 28 -> 2.2 (57%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 3.4 (50%) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 3.3 (41%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 19.1 (70%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 35%
+  procedural 40.5: unresolved — лучшее 27%
+  procedural 40: remapped — 40 -> 12.1 (53%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 12.1 (46%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 24%
+  procedural 27: remapped — 27 -> 1.6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 3.3 (38%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 19.1 (45%, слабо) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 46: unresolved — лучшее 32%
+  procedural 45: remapped — 45 -> 3.4 (47%, слабо) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 27%
+  procedural 49: unresolved — лучшее 23%
+  procedural 38: remapped — 38 -> 3.4 (45%, слабо) «Субъекты задержания»
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 19%
+  traffic 74.2: unresolved — лучшее 10%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 19%
+
+=== detroit: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:2 remapped:2 unresolved:0
+  ✗ lawyer-detention-grounds   confident:1 remapped:3 unresolved:1
+  ✗ search-legality            confident:3 remapped:1 unresolved:2
+  ✗ detention-time             confident:0 remapped:3 unresolved:2
+  ~ pursuit-code6              confident:4 remapped:5 unresolved:0
+  ✗ drunk-driver               confident:0 remapped:3 unresolved:1
+  ✗ drugs-found                confident:5 remapped:1 unresolved:1
+  ✗ use-of-force               confident:1 remapped:5 unresolved:1
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ✗ self-defense-claim         confident:2 remapped:1 unresolved:3
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ~ detainee-injured           confident:2 remapped:2 unresolved:0
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ~ dtp-response               confident:0 remapped:7 unresolved:0
+  ✗ vehicle-impound            confident:0 remapped:2 unresolved:5
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:7 unresolved:2
+  ✗ bail-release               confident:0 remapped:0 unresolved:7
+  ~ hostage-situation          confident:3 remapped:2 unresolved:0
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ~ restricted-area            confident:4 remapped:1 unresolved:0
+  ✗ press-on-scene             confident:2 remapped:1 unresolved:1
+Миранда: взята из procedural 10: «Вы имеете право хранить молчание, всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 6.4: remapped — 6.4 -> 8.2 (80%) «(A, CR) Насильственные действия сексуального харак»
+  criminal 13.3: remapped — 13.3 -> 13.2 (47%, слабо) «(A, CR) Незаконные хранение, приобретение, перевоз»
+  criminal 5.7: unresolved — лучшее 27%
+  criminal 3.1: unresolved — лучшее 32%
+  criminal 3.2: unresolved — лучшее 12%
+  criminal 3.3: unresolved — лучшее 30%
+  criminal 15.8: unresolved — лучшее 27%
+  criminal 17.8: remapped — 17.8 -> 17.9 (100%) «Незаконная помеха при задержании нарушителя, равно»
+  criminal 5.8: unresolved — лучшее 18%
+  criminal 5.9: unresolved — лучшее 33%
+  criminal 5.11: unresolved — лучшее 21%
+  criminal 16.17: unresolved — лучшее 30%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (69%) «(A, CR) Незаконное нахождение на охраняемой террит»
+  criminal 9.5: remapped — 9.5 -> 9.4 (53%) «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 34%
+  procedural 28: remapped — 28 -> 17 (76%) «Недопустимые доказательства»
+  procedural 19: remapped — 19 -> 2.1 (38%, слабо) «Терминология»
+  procedural 20: unresolved — лучшее 34%
+  procedural 22: remapped — 22 -> 8 (45%, слабо) «Процесс задержания и ареста»
+  procedural 23: unresolved — лучшее 29%
+  procedural 3: unresolved — лучшее 22%
+  procedural 18: remapped — 18 -> 8.1 (36%, слабо) «Процесс задержания и ареста государственных служащ»
+  procedural 40.5: remapped — 40.5 -> 26 (94%) «Стадии применения силы»
+  procedural 41: remapped — 41 -> 27 (74%) «Сотрудник правоохранительных органов и/или военнос»
+  procedural 40: remapped — 40 -> 26 (94%) «Стадии применения силы»
+  procedural 42: unresolved — лучшее 35%
+  procedural 15: unresolved — лучшее 33%
+  procedural 27: remapped — 27 -> 16 (93%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 15.1 (37%, слабо) «Регламент допроса»
+  procedural 44: remapped — 44 -> 8 (39%, слабо) «Процесс задержания и ареста»
+  procedural 46: unresolved — лучшее 35%
+  procedural 45: remapped — 45 -> 15.1 (61%) «Регламент допроса»
+  procedural 47: remapped — 47 -> 15.1 (80%) «Регламент допроса»
+  procedural 49: unresolved — лучшее 21%
+  procedural 38: unresolved — лучшее 34%
+  procedural 39: unresolved — лучшее 32%
+  traffic 7: remapped — 7 -> 12 (100%) «Водитель обязан остановиться по первому требованию»
+  traffic 8: remapped — 8 -> 13 (100%) «Водитель обязан по требованию сотрудника правоохра»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 11 (100%) «Водитель обязан предъявить и передать сотруднику п»
+  traffic 9: remapped — 9 -> 14 (73%) «При аварии водитель обязан:»
+  traffic 10: remapped — 10 -> 15 (100%) «При аварии, в которой погибли или ранены люди, вод»
+  traffic 11: remapped — 11 -> 16 (62%) «Если в результате аварии причинён вред только имущ»
+  traffic 11.2: remapped — 11.2 -> 16.2 (46%, слабо) «Если водители не договорились о виновнике аварии, »
+  traffic 72: unresolved — лучшее 30%
+  traffic 74: unresolved — лучшее 33%
+  traffic 74.2: unresolved — лучшее 28%
+  traffic 74.3: remapped — 74.3 -> 9 (49%, слабо) «Порядок проведения трафик-стопа»
+  traffic 82: unresolved — лучшее 33%
+  traffic 83: remapped — 83 -> 10.1 (45%, слабо) «При фиксации нарушения дорожного кодекса и при нео»
+
+=== chicago: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:1 remapped:0 unresolved:5
+  ✗ miranda                    confident:0 remapped:1 unresolved:3
+  ✗ lawyer-detention-grounds   confident:0 remapped:2 unresolved:3
+  ✗ search-legality            confident:0 remapped:2 unresolved:4
+  ✗ detention-time             confident:0 remapped:0 unresolved:5
+  ✗ pursuit-code6              confident:1 remapped:6 unresolved:2
+  ~ drunk-driver               confident:0 remapped:7 unresolved:0
+  ✗ drugs-found                confident:3 remapped:2 unresolved:2
+  ~ use-of-force               confident:1 remapped:6 unresolved:0
+  ✗ document-check             confident:1 remapped:0 unresolved:3
+  ✗ self-defense-claim         confident:3 remapped:1 unresolved:2
+  ✗ bribe-offer                confident:3 remapped:2 unresolved:2
+  ✗ detainee-injured           confident:1 remapped:1 unresolved:2
+  ✗ crowd-interference         confident:0 remapped:2 unresolved:4
+  ✗ traffic-stop               confident:2 remapped:3 unresolved:2
+  ~ dtp-response               confident:0 remapped:8 unresolved:0
+  ✗ vehicle-impound            confident:0 remapped:5 unresolved:2
+  ✗ arrest-warrant             confident:0 remapped:0 unresolved:5
+  ✗ interrogation              confident:0 remapped:5 unresolved:4
+  ✗ bail-release               confident:0 remapped:4 unresolved:3
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:2 remapped:1 unresolved:3
+  ✗ restricted-area            confident:0 remapped:4 unresolved:1
+  ✗ press-on-scene             confident:1 remapped:1 unresolved:2
+Миранда: НЕ найдена в ПК/УК — фраза осталась атлантской, сверь вручную
+
+Карта переносов (не-confident):
+  criminal 17.5: unresolved — лучшее 19%
+  criminal 17.1: remapped — 17.1 -> 16.2 (58%) «Угроза, а равно посягательство на жизнь судьи, или»
+  criminal 6.4: remapped — 6.4 -> 8.2 (79%) «Изнасилование и/или иные действия сексуального хар»
+  criminal 13.3: remapped — 13.3 -> 13.2 (59%) «Незаконное приобретение, хранение, перевозка нарко»
+  criminal 13.5: remapped — 13.5 -> 13.6 (44%, слабо) «Незаконный сбыт, равно как пособничество в сбыте н»
+  criminal 5.7: unresolved — лучшее 26%
+  criminal 15.4: remapped — 15.4 -> 15.5 (92%) «Дача и/или получение взятки»
+  criminal 15.8: unresolved — лучшее 24%
+  criminal 17.8: remapped — 17.8 -> 17.8 (47%, слабо) «Помеха работе правоохранительных органов, повлекша»
+  criminal 5.8: remapped — 5.8 -> 2 (40%, слабо) [criminal -> procedural!] «Права задержанного»
+  criminal 5.9: unresolved — лучшее 22%
+  criminal 5.11: unresolved — лучшее 9%
+  criminal 16.17: unresolved — лучшее 16%
+  criminal 12.7: remapped — 12.7 -> 12.6.1 (80%) «Незаконное проникновение или нахождение на закрыто»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.6.1 (61%) «Незаконное проникновение или нахождение на закрыто»
+  criminal 9.2: remapped — 9.2 -> 9.2 (46%, слабо) «Взлом, равно как и попытка взлома с целью незаконн»
+  criminal 9.5: remapped — 9.5 -> 9.4 (100%) «Воспрепятствование законной профессиональной деяте»
+  procedural 14: unresolved — лучшее 32%
+  procedural 16: unresolved — лучшее 28%
+  procedural 13: unresolved — лучшее 34%
+  procedural 17: unresolved — лучшее 26%
+  procedural 25: unresolved — лучшее 21%
+  procedural 28: remapped — 28 -> 6 (45%, слабо) «Принципы Процессуального Кодекса:»
+  procedural 19: unresolved — лучшее 31%
+  procedural 20: unresolved — лучшее 34%
+  procedural 22: remapped — 22 -> 2 (37%, слабо) «Права задержанного»
+  procedural 23: unresolved — лучшее 23%
+  procedural 24: remapped — 24 -> 6 (48%, слабо) «Основания для проведения имущественного обыска:»
+  procedural 3: unresolved — лучшее 17%
+  procedural 18: unresolved — лучшее 30%
+  procedural 40.5: remapped — 40.5 -> 1 (94%) «Стадии применения силы»
+  procedural 41: remapped — 41 -> 1 (42%, слабо) «Стадии применения силы»
+  procedural 40: remapped — 40 -> 1 (94%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 3 (35%, слабо) «Стадии применения силы должны применяться в порядк»
+  procedural 15: unresolved — лучшее 23%
+  procedural 27: remapped — 27 -> 6 (45%, слабо) «Принципы Процессуального Кодекса:»
+  procedural 21: remapped — 21 -> 2 (43%, слабо) «Права задержанного»
+  procedural 44: remapped — 44 -> 1 (53%) «Основания для вызова на допрос»
+  procedural 46: remapped — 46 -> 3 (40%, слабо) «Лица уполномоченные к проведению допроса»
+  procedural 45: unresolved — лучшее 34%
+  procedural 47: remapped — 47 -> 5 (50%, слабо) «Права и обязанности допрашиваемого»
+  procedural 49: unresolved — лучшее 30%
+  procedural 38: remapped — 38 -> 8 (42%, слабо) «Субъекты задержания»
+  procedural 39: remapped — 39 -> 3 (35%, слабо) «Сотрудник проводящий задержание обязан правильно з»
+  traffic 7: remapped — 7 -> 2 (100%) «Водитель обязан остановиться по первому требованию»
+  traffic 8: remapped — 8 -> 3 (100%) «Водитель обязан по требованию сотрудника правоохра»
+  traffic 12: remapped — 12 -> 7 (100%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.1: remapped — 12.1 -> 7.1 (100%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.2: remapped — 12.2 -> 7.2 (100%) «Водителю запрещается употреблять алкогольные или н»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: remapped — 11 -> 6 (100%) «Если в результате аварии причинен вред только имущ»
+  traffic 11.2: remapped — 11.2 -> 6.2 (92%) «Если водители не договорились о том кто виновник а»
+  traffic 72: unresolved — лучшее 28%
+  traffic 74: remapped — 74 -> 65 (44%, слабо) «После завершения проверки и подтверждения достаточ»
+  traffic 74.2: remapped — 74.2 -> 65 (41%, слабо) «После завершения проверки и подтверждения достаточ»
+  traffic 74.3: remapped — 74.3 -> 65 (42%, слабо) «После завершения проверки и подтверждения достаточ»
+  traffic 82: unresolved — лучшее 30%
+  traffic 83: remapped — 83 -> 66 (39%, слабо) «Эвакуация транспортных средств без номерных знаков»
+
+=== sanfrancisco: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:1 remapped:0 unresolved:5
+  ✗ miranda                    confident:0 remapped:0 unresolved:4
+  ✗ lawyer-detention-grounds   confident:0 remapped:1 unresolved:4
+  ✗ search-legality            confident:0 remapped:0 unresolved:6
+  ✗ detention-time             confident:0 remapped:0 unresolved:5
+  ✗ pursuit-code6              confident:1 remapped:5 unresolved:3
+  ✗ drunk-driver               confident:0 remapped:6 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:1 remapped:0 unresolved:6
+  ✗ document-check             confident:0 remapped:2 unresolved:2
+  ✗ self-defense-claim         confident:3 remapped:0 unresolved:3
+  ✗ bribe-offer                confident:4 remapped:1 unresolved:2
+  ✗ detainee-injured           confident:1 remapped:1 unresolved:2
+  ✗ crowd-interference         confident:0 remapped:5 unresolved:1
+  ✗ traffic-stop               confident:0 remapped:6 unresolved:1
+  ✗ dtp-response               confident:0 remapped:1 unresolved:7
+  ✗ vehicle-impound            confident:0 remapped:3 unresolved:4
+  ✗ arrest-warrant             confident:0 remapped:0 unresolved:5
+  ✗ interrogation              confident:0 remapped:1 unresolved:8
+  ✗ bail-release               confident:0 remapped:5 unresolved:2
+  ✗ hostage-situation          confident:2 remapped:0 unresolved:3
+  ✗ suspect-escape             confident:3 remapped:0 unresolved:3
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ✗ press-on-scene             confident:0 remapped:3 unresolved:1
+Миранда: НЕ найдена в ПК/УК — фраза осталась атлантской, сверь вручную
+
+Карта переносов (не-confident):
+  criminal 17.5: remapped — 17.5 -> 17.6 (51%) «Неподчинение законным требованиям сотрудников FIB,»
+  criminal 17.1: remapped — 17.1 -> 16.2 (60%) «Угроза, а равно посягательство на жизнь судьи, или»
+  criminal 6.4: remapped — 6.4 -> 8.6 (82%) «Нарушение правил вождения или эксплуатации боевой,»
+  criminal 13.2: remapped — 13.2 -> 13.3 (77%) «Незаконное хранение, сбыт, приобретение, перевозка»
+  criminal 13.5: remapped — 13.5 -> 13.3 (36%, слабо) «Незаконное хранение, сбыт, приобретение, перевозка»
+  criminal 5.7: remapped — 5.7 -> 5.6 (76%) «Найденные наркотические вещества в ходе обыска сот»
+  criminal 15.8: unresolved — лучшее 34%
+  criminal 17.8: remapped — 17.8 -> 17.10 (64%) «Незаконная помеха при задержании, аресте или проце»
+  criminal 5.8: unresolved — лучшее 23%
+  criminal 5.9: remapped — 5.9 -> 5.8 (100%) «Стоимость выхода под залог регламентирует настоящи»
+  criminal 5.11: remapped — 5.11 -> 5.9 (58%) «Причины, по которым лицу отказывается в праве выхо»
+  criminal 12.7.1: unresolved — лучшее 33%
+  criminal 9.4: remapped — 9.4 -> 16.1.1 (36%, слабо) «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: unresolved — лучшее 30%
+  procedural 14: unresolved — лучшее 26%
+  procedural 16: unresolved — лучшее 33%
+  procedural 13: unresolved — лучшее 28%
+  procedural 17: unresolved — лучшее 26%
+  procedural 25: unresolved — лучшее 26%
+  procedural 28: unresolved — лучшее 13%
+  procedural 19: unresolved — лучшее 19%
+  procedural 20: remapped — 20 -> 6.1 (40%, слабо) «Если задержанное лицо обладает статусом неприкосно»
+  procedural 22: unresolved — лучшее 28%
+  procedural 23: unresolved — лучшее 19%
+  procedural 24: unresolved — лучшее 14%
+  procedural 3: unresolved — лучшее 16%
+  procedural 18: unresolved — лучшее 22%
+  procedural 40.5: unresolved — лучшее 13%
+  procedural 41: unresolved — лучшее 13%
+  procedural 40: unresolved — лучшее 29%
+  procedural 42: unresolved — лучшее 30%
+  procedural 15: unresolved — лучшее 15%
+  procedural 27: unresolved — лучшее 12%
+  procedural 21: remapped — 21 -> 6.1 (45%, слабо) «Если задержанное лицо обладает статусом неприкосно»
+  procedural 44: unresolved — лучшее 24%
+  procedural 46: unresolved — лучшее 35%
+  procedural 45: remapped — 45 -> 6.1 (42%, слабо) «Если задержанное лицо обладает статусом неприкосно»
+  procedural 47: unresolved — лучшее 23%
+  procedural 49: unresolved — лучшее 22%
+  procedural 38: remapped — 38 -> 6.1 (38%, слабо) «Если задержанное лицо обладает статусом неприкосно»
+  procedural 39: unresolved — лучшее 25%
+  traffic 7: remapped — 7 -> 17 (100%) «Водитель обязан остановиться по первому требованию»
+  traffic 8: remapped — 8 -> 18 (100%) «Водитель обязан по требованию сотрудника правоохра»
+  traffic 12: remapped — 12 -> 19 (85%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.1: remapped — 12.1 -> 20 (100%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.2: unresolved — лучшее 35%
+  traffic 6: remapped — 6 -> 16 (100%) «Водитель обязан предъявить и передать сотруднику п»
+  traffic 9: unresolved — лучшее 20%
+  traffic 10: unresolved — лучшее 18%
+  traffic 11: unresolved — лучшее 25%
+  traffic 11.2: unresolved — лучшее 9%
+  traffic 72: remapped — 72 -> 41 (39%, слабо) «Трафик-стоп – процессуальная процедура, направленн»
+  traffic 74: remapped — 74 -> 43 (48%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 74.2: unresolved — лучшее 23%
+  traffic 74.3: remapped — 74.3 -> 43 (37%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 82: unresolved — лучшее 16%
+  traffic 83: unresolved — лучшее 26%
+
+=== sandiego: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:1 unresolved:2
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:3 remapped:0 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ~ bribe-offer                confident:5 remapped:2 unresolved:0
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:3 unresolved:2
+  ✗ traffic-stop               confident:2 remapped:4 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:2 unresolved:7
+  ✗ bail-release               confident:0 remapped:2 unresolved:5
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что Вы скажете, может быть и будет исполь…»
+
+Карта переносов (не-confident):
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (77%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (70%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «★★★★ [Федеральная/Региональная]Незаконные приобрет»
+  criminal 5.7: unresolved — лучшее 30%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (42%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: remapped — 15.8 -> 37 (37%, слабо) [criminal -> procedural!] «Стадии применения силы»
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: remapped — 5.8 -> 17 (45%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 34 (38%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 17%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 16.17: unresolved — лучшее 23%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (80%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 21%
+  criminal 9.4: remapped — 9.4 -> 6.6 (67%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 6.6 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 34%
+  procedural 28: remapped — 28 -> 12 (69%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (42%, слабо) «Субъекты задержания»
+  procedural 22: unresolved — лучшее 25%
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 79 (68%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 33%
+  procedural 40.5: unresolved — лучшее 27%
+  procedural 40: remapped — 40 -> 37 (53%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 37 (50%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 25%
+  procedural 27: remapped — 27 -> 6 (95%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (43%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: unresolved — лучшее 35%
+  procedural 46: unresolved — лучшее 28%
+  procedural 45: remapped — 45 -> 18 (49%, слабо) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 25%
+  procedural 49: unresolved — лучшее 18%
+  procedural 38: unresolved — лучшее 33%
+  procedural 39: unresolved — лучшее 29%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 19%
+  traffic 74.2: unresolved — лучшее 10%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 19%
+
+=== losangeles: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:0 remapped:3 unresolved:3
+  ✗ miranda                    confident:0 remapped:2 unresolved:2
+  ✗ lawyer-detention-grounds   confident:0 remapped:4 unresolved:1
+  ✗ search-legality            confident:0 remapped:2 unresolved:4
+  ✗ detention-time             confident:0 remapped:2 unresolved:3
+  ✗ pursuit-code6              confident:4 remapped:2 unresolved:3
+  ✗ drunk-driver               confident:0 remapped:3 unresolved:1
+  ✗ drugs-found                confident:2 remapped:4 unresolved:1
+  ✗ use-of-force               confident:1 remapped:3 unresolved:3
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ✗ self-defense-claim         confident:0 remapped:5 unresolved:1
+  ~ bribe-offer                confident:4 remapped:3 unresolved:0
+  ~ detainee-injured           confident:0 remapped:4 unresolved:0
+  ✗ crowd-interference         confident:1 remapped:3 unresolved:2
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ✗ dtp-response               confident:0 remapped:4 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:3 unresolved:4
+  ✗ arrest-warrant             confident:0 remapped:3 unresolved:2
+  ✗ interrogation              confident:0 remapped:8 unresolved:1
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:0 remapped:3 unresolved:2
+  ✗ suspect-escape             confident:3 remapped:2 unresolved:1
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 1: «Вы имеете право хранить молчание. Всё, что вы скажете, будет использовано против…»
+
+Карта переносов (не-confident):
+  criminal 12.8: remapped — 12.8 -> 12.8 (45%, слабо) «Незаконный оборот оружия, спецсредств, боеприпасов»
+  criminal 6.4: remapped — 6.4 -> 18.7 (77%) «Нарушение правил вождения или эксплуатации боевой,»
+  criminal 13.2: remapped — 13.2 -> 13.1 (100%) «Незаконные хранение, приобретение, перевозка нарко»
+  criminal 13.3: remapped — 13.3 -> 13.1 (91%) «Незаконные хранение, приобретение, перевозка нарко»
+  criminal 13.5: remapped — 13.5 -> 13.1 (38%, слабо) «Незаконные хранение, приобретение, перевозка нарко»
+  criminal 5.7: remapped — 5.7 -> 5.5 (78%) «Обнаруженные у гражданина наркотические вещества в»
+  criminal 3.1: remapped — 3.1 -> 3.1 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 3.1 (45%, слабо) «Необходимая оборона»
+  criminal 3.3: unresolved — лучшее 26%
+  criminal 15.8: remapped — 15.8 -> 12.6 (36%, слабо) «Хулиганство»
+  criminal 15.6: remapped — 15.6 -> 15.7 (100%) «Халатность»
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: unresolved — лучшее 21%
+  criminal 5.9: remapped — 5.9 -> 5.7 (91%) «Стоимость выхода под залог регламентирует настоящи»
+  criminal 5.11: remapped — 5.11 -> 5.8 (52%) «Причины, по которым лицу можно отказать в праве вы»
+  criminal 12.3: remapped — 12.3 -> 12.1 (45%, слабо) «Терроризм»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (80%) «Незаконное нахождение или проникновение»
+  criminal 9.2: remapped — 9.2 -> 9.1 (89%) «Вмешательство в частную жизнь»
+  criminal 9.4: remapped — 9.4 -> 9.2 (85%) «Воспрепятствование»
+  criminal 9.5: remapped — 9.5 -> 9.2 (100%) «Воспрепятствование»
+  procedural 14: remapped — 14 -> 4 (39%, слабо) «Порядок задержания подозреваемого»
+  procedural 16: remapped — 16 -> 4 (50%) «Порядок задержания подозреваемого»
+  procedural 13: unresolved — лучшее 33%
+  procedural 17: unresolved — лучшее 24%
+  procedural 25: unresolved — лучшее 31%
+  procedural 28: remapped — 28 -> 2 (45%, слабо) «Принципы Процессуального Кодекса - основные положе»
+  procedural 19: unresolved — лучшее 23%
+  procedural 20: remapped — 20 -> 6 (46%, слабо) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 4 (43%, слабо) «Порядок задержания подозреваемого»
+  procedural 23: unresolved — лучшее 31%
+  procedural 24: unresolved — лучшее 33%
+  procedural 3: unresolved — лучшее 28%
+  procedural 18: remapped — 18 -> 4 (35%, слабо) «Порядок задержания подозреваемого»
+  procedural 40.5: unresolved — лучшее 27%
+  procedural 41: unresolved — лучшее 15%
+  procedural 40: remapped — 40 -> 1 (44%, слабо) «Стадии применения силы - стандарты, классифицирующ»
+  procedural 42: remapped — 42 -> 1 (39%, слабо) «Стадии применения силы - стандарты, классифицирующ»
+  procedural 15: unresolved — лучшее 29%
+  procedural 27: remapped — 27 -> 2 (45%, слабо) «Принципы Процессуального Кодекса - основные положе»
+  procedural 21: remapped — 21 -> 4 (38%, слабо) «Порядок задержания подозреваемого»
+  procedural 44: remapped — 44 -> 2 (64%) «Основания для вызова на допрос»
+  procedural 46: unresolved — лучшее 32%
+  procedural 45: remapped — 45 -> 3 (73%) «Субъекты допроса»
+  procedural 47: remapped — 47 -> 8 (45%, слабо) «Подозреваемый/обвиняемый имеет право:»
+  procedural 49: remapped — 49 -> 12 (49%, слабо) «Правила проведения допроса»
+  procedural 38: unresolved — лучшее 34%
+  procedural 39: unresolved — лучшее 18%
+  traffic 7: remapped — 7 -> 2 (83%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 8: remapped — 8 -> 2 (51%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (66%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 64 (41%, слабо) «Понятие Трафик-стопа»
+  traffic 74: remapped — 74 -> 66 (43%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 74.2: unresolved — лучшее 22%
+  traffic 74.3: unresolved — лучшее 31%
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: remapped — 83 -> 56.2 (42%, слабо) «Особый порядок эвакуации в специальной общественно»
+
+=== miami: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ~ lawyer-detention-grounds   confident:2 remapped:3 unresolved:0
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:2 unresolved:2
+  ✗ pursuit-code6              confident:4 remapped:2 unresolved:3
+  ~ drunk-driver               confident:0 remapped:7 unresolved:0
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ~ detainee-injured           confident:2 remapped:2 unresolved:0
+  ✗ crowd-interference         confident:1 remapped:4 unresolved:1
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ~ dtp-response               confident:0 remapped:8 unresolved:0
+  ✗ vehicle-impound            confident:0 remapped:3 unresolved:4
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:5 unresolved:4
+  ✗ bail-release               confident:0 remapped:4 unresolved:3
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:2 remapped:1 unresolved:3
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ✗ press-on-scene             confident:1 remapped:1 unresolved:2
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что Вы скажете, может быть и будет исполь…»
+
+Карта переносов (не-confident):
+  criminal 17.10: unresolved — лучшее 28%
+  criminal 6.4: remapped — 6.4 -> 6.1 (79%) «Причинение вреда здоровью»
+  criminal 13.2: remapped — 13.2 -> 13.4 (87%) «★★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Незаконные приобре»
+  criminal 13.3: remapped — 13.3 -> 13.4 (79%) «★★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Незаконные приобре»
+  criminal 13.5: remapped — 13.5 -> 13.2 (48%, слабо) «★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Незаконный сбыт, ра»
+  criminal 5.7: unresolved — лучшее 34%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (42%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 22%
+  criminal 17.8: remapped — 17.8 -> 17.8 (45%, слабо) «★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Помеха работе госуд»
+  criminal 5.8: remapped — 5.8 -> 17 (44%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 33 (40%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 19%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ (ФЕДЕРАЛЬНЫЙ) Похищение человека»
+  criminal 16.17: unresolved — лучшее 21%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (56%) «Незаконное проникновение и/или нахождение в соотве»
+  criminal 9.2: unresolved — лучшее 24%
+  criminal 9.4: unresolved — лучшее 25%
+  criminal 9.5: unresolved — лучшее 28%
+  procedural 17: unresolved — лучшее 23%
+  procedural 28: remapped — 28 -> 12 (68%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (36%, слабо) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 17 (38%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: unresolved — лучшее 18%
+  procedural 18: remapped — 18 -> 51 (37%, слабо) «Допрос»
+  procedural 40.5: unresolved — лучшее 29%
+  procedural 40: remapped — 40 -> 36 (48%, слабо) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 36 (45%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 25%
+  procedural 27: remapped — 27 -> 6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (37%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (38%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: unresolved — лучшее 33%
+  procedural 45: remapped — 45 -> 18 (39%, слабо) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 22%
+  procedural 49: unresolved — лучшее 20%
+  procedural 38: remapped — 38 -> 36 (36%, слабо) «Стадии применения силы»
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 7 (45%, слабо) «Статья 7»
+  traffic 8: remapped — 8 -> 7 (45%, слабо) «Статья 7»
+  traffic 12: remapped — 12 -> 12 (45%, слабо) «Статья 12»
+  traffic 12.1: remapped — 12.1 -> 12.1 (45%, слабо) «Статья 12.1»
+  traffic 12.2: remapped — 12.2 -> 65 (36%, слабо) «Статья 65»
+  traffic 6: remapped — 6 -> 6 (45%, слабо) «-1»
+  traffic 9: remapped — 9 -> 9 (45%, слабо) «Статья 9»
+  traffic 10: remapped — 10 -> 10 (45%, слабо) «Статья 10»
+  traffic 11: remapped — 11 -> 11 (45%, слабо) «Статья 11»
+  traffic 11.2: remapped — 11.2 -> 11.2 (45%, слабо) «Статья 11.2»
+  traffic 72: remapped — 72 -> 63 (38%, слабо) «Статья 63»
+  traffic 74: remapped — 74 -> 65 (36%, слабо) «Статья 65»
+  traffic 74.2: unresolved — лучшее 21%
+  traffic 74.3: remapped — 74.3 -> 65 (35%, слабо) «Статья 65»
+  traffic 82: unresolved — лучшее 26%
+  traffic 83: unresolved — лучшее 27%
+
+=== lasvegas: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:1 remapped:1 unresolved:4
+  ✗ miranda                    confident:0 remapped:0 unresolved:4
+  ✗ lawyer-detention-grounds   confident:0 remapped:0 unresolved:5
+  ✗ search-legality            confident:0 remapped:1 unresolved:5
+  ✗ detention-time             confident:0 remapped:0 unresolved:5
+  ✗ pursuit-code6              confident:2 remapped:4 unresolved:3
+  ~ drunk-driver               confident:3 remapped:4 unresolved:0
+  ~ drugs-found                confident:3 remapped:4 unresolved:0
+  ✗ use-of-force               confident:1 remapped:0 unresolved:6
+  ✗ document-check             confident:0 remapped:2 unresolved:2
+  ✗ self-defense-claim         confident:0 remapped:0 unresolved:6
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:1 remapped:1 unresolved:2
+  ✗ crowd-interference         confident:1 remapped:3 unresolved:2
+  ✗ traffic-stop               confident:0 remapped:6 unresolved:1
+  ~ dtp-response               confident:6 remapped:2 unresolved:0
+  ✗ vehicle-impound            confident:0 remapped:3 unresolved:4
+  ✗ arrest-warrant             confident:0 remapped:0 unresolved:5
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:2 remapped:0 unresolved:3
+  ✗ suspect-escape             confident:3 remapped:0 unresolved:3
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ✗ press-on-scene             confident:2 remapped:1 unresolved:1
+Миранда: НЕ найдена в ПК/УК — фраза осталась атлантской, сверь вручную
+
+Карта переносов (не-confident):
+  criminal 17.5: remapped — 17.5 -> 17.6 (90%) «Неподчинение законным требованиям сотрудника Федер»
+  criminal 6.4: remapped — 6.4 -> 8.2 (81%) «Насильственные действия сексуального характера пов»
+  criminal 13.3: remapped — 13.3 -> 13.2 (82%) «Незаконное хранение, приобретение и перевозка нарк»
+  criminal 13.5: remapped — 13.5 -> 13.6 (37%, слабо) «Незаконный сбыт и распространение наркотических ср»
+  criminal 5.7: remapped — 5.7 -> 2.1 (45%, слабо) «Государственный служащий, совершивший преступление»
+  criminal 3.1: unresolved — лучшее 35%
+  criminal 3.2: unresolved — лучшее 35%
+  criminal 3.3: unresolved — лучшее 34%
+  criminal 17.8: remapped — 17.8 -> 17.10 (63%) «Незаконная помеха при задержании, аресте или проце»
+  criminal 5.8: unresolved — лучшее 26%
+  criminal 5.9: remapped — 5.9 -> 2.1 (45%, слабо) «Государственный служащий, совершивший преступление»
+  criminal 5.11: remapped — 5.11 -> 2.1 (45%, слабо) «Государственный служащий, совершивший преступление»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (86%) «Незаконное проникновение и/или нахождение на закры»
+  procedural 14: unresolved — лучшее 23%
+  procedural 16: unresolved — лучшее 29%
+  procedural 13: unresolved — лучшее 25%
+  procedural 17: unresolved — лучшее 21%
+  procedural 25: remapped — 25 -> 71 (41%, слабо) [procedural -> traffic!] «Порядок проведения Трафик-стопа:»
+  procedural 28: unresolved — лучшее 12%
+  procedural 19: unresolved — лучшее 33%
+  procedural 20: unresolved — лучшее 29%
+  procedural 22: unresolved — лучшее 35%
+  procedural 23: unresolved — лучшее 23%
+  procedural 24: unresolved — лучшее 17%
+  procedural 3: unresolved — лучшее 17%
+  procedural 18: unresolved — лучшее 31%
+  procedural 40.5: unresolved — лучшее 13%
+  procedural 41: unresolved — лучшее 23%
+  procedural 40: unresolved — лучшее 32%
+  procedural 42: unresolved — лучшее 15%
+  procedural 15: unresolved — лучшее 24%
+  procedural 27: unresolved — лучшее 9%
+  procedural 21: remapped — 21 -> 5.13 (45%, слабо) «Один уполномоченный сотрудник Emergency Medical Se»
+  procedural 44: unresolved — лучшее 34%
+  procedural 46: unresolved — лучшее 34%
+  procedural 45: remapped — 45 -> 3.2 (39%, слабо) «Субъекты следственного допроса»
+  procedural 47: remapped — 47 -> 5.1 (37%, слабо) «Присутствовать на допросе со своим адвокатом»
+  procedural 49: unresolved — лучшее 18%
+  procedural 38: unresolved — лучшее 32%
+  procedural 39: unresolved — лучшее 31%
+  traffic 7: remapped — 7 -> 8 (100%) «Водитель обязан остановиться по первому требованию»
+  traffic 8: remapped — 8 -> 8.1 (100%) «Водитель обязан по требованию сотрудника правоохра»
+  traffic 12.2: remapped — 12.2 -> 71 (36%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 6: remapped — 6 -> 7 (100%) «Водитель обязан предъявить и передать сотруднику п»
+  traffic 72: remapped — 72 -> 69 (38%, слабо) «Понятие Трафик-стопа»
+  traffic 74: remapped — 74 -> 71 (47%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 74.2: unresolved — лучшее 25%
+  traffic 74.3: remapped — 74.3 -> 71 (41%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 82: unresolved — лучшее 19%
+  traffic 83: unresolved — лучшее 28%
+
+=== washington: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:1 unresolved:2
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:1 remapped:2 unresolved:1
+  ~ drugs-found                confident:4 remapped:3 unresolved:0
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:4 unresolved:1
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:4 unresolved:5
+  ✗ bail-release               confident:0 remapped:5 unresolved:2
+  ✗ hostage-situation          confident:2 remapped:0 unresolved:3
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:1 remapped:3 unresolved:1
+  ✗ press-on-scene             confident:1 remapped:2 unresolved:1
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что Вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 13.2: remapped — 13.2 -> 13.3 (88%) «★★★★★ [ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Незаконное хранен»
+  criminal 13.5: remapped — 13.5 -> 13.3 (49%, слабо) «★★★★★ [ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Незаконное хранен»
+  criminal 5.7: remapped — 5.7 -> 5.10 (93%) «Нелегальные вещества»
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 33%
+  criminal 17.8: remapped — 17.8 -> 17.9 (65%) «★★★ [ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Незаконная помеха п»
+  criminal 5.8: remapped — 5.8 -> 17 (42%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 32 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 22%
+  criminal 12.3: unresolved — лучшее 32%
+  criminal 16.17: unresolved — лучшее 23%
+  criminal 12.7: remapped — 12.7 -> 12.7 (45%, слабо) «[ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Нарушение режима посеще»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (45%, слабо) «[ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Нарушение режима посеще»
+  criminal 9.2: unresolved — лучшее 30%
+  criminal 9.4: remapped — 9.4 -> 9.3 (37%, слабо) «★★★★ [ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ] Совершение действи»
+  criminal 9.5: unresolved — лучшее 30%
+  procedural 17: unresolved — лучшее 31%
+  procedural 28: remapped — 28 -> 12 (71%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (57%) «Субъекты задержания»
+  procedural 22: unresolved — лучшее 32%
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 63 (68%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 33%
+  procedural 40.5: unresolved — лучшее 30%
+  procedural 40: remapped — 40 -> 35 (61%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 35 (45%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 24%
+  procedural 27: remapped — 27 -> 6 (94%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 18 (45%, слабо) «Субъекты задержания»
+  procedural 44: unresolved — лучшее 33%
+  procedural 46: unresolved — лучшее 34%
+  procedural 45: remapped — 45 -> 18 (49%, слабо) «Субъекты задержания»
+  procedural 47: remapped — 47 -> 53 (45%, слабо) «Допрос»
+  procedural 49: unresolved — лучшее 21%
+  procedural 38: remapped — 38 -> 18 (42%, слабо) «Субъекты задержания»
+  procedural 39: remapped — 39 -> 32 (37%, слабо) «Выпуск под залог»
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 8: remapped — 8 -> 2 (52%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (63%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 21%
+  traffic 72: remapped — 72 -> 59 (36%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 15%
+  traffic 74.2: unresolved — лучшее 8%
+  traffic 74.3: unresolved — лучшее 29%
+  traffic 82: unresolved — лучшее 19%
+  traffic 83: unresolved — лучшее 21%
+
+=== dallas: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ✗ miranda                    confident:2 remapped:1 unresolved:1
+  ✗ lawyer-detention-grounds   confident:1 remapped:3 unresolved:1
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:0 remapped:3 unresolved:2
+  ✗ pursuit-code6              confident:7 remapped:0 unresolved:2
+  ✗ drunk-driver               confident:1 remapped:2 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ~ detainee-injured           confident:2 remapped:2 unresolved:0
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:3 remapped:3 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:0 unresolved:7
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:4 unresolved:5
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:2 remapped:0 unresolved:3
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (81%) «- (F/R/S) Незаконные приобретение, хранение, перев»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (74%) «- (F/R/S) Незаконные приобретение, хранение, перев»
+  criminal 13.5: remapped — 13.5 -> 13.2 (38%, слабо) «- (F/R/S) Незаконные приобретение, хранение, перев»
+  criminal 5.7: unresolved — лучшее 18%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 35%
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: remapped — 5.8 -> 17 (40%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: unresolved — лучшее 31%
+  criminal 5.11: unresolved — лучшее 24%
+  criminal 12.3: unresolved — лучшее 29%
+  criminal 16.17: unresolved — лучшее 25%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (84%) «- (F/R) Незаконное проникновение или нахождение на»
+  criminal 9.2: remapped — 9.2 -> 3.12 (62%) [criminal -> administrative!] «Незаконное проникновение в жилище, совершенное про»
+  criminal 9.4: remapped — 9.4 -> 3.13 (64%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 3.13 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 33%
+  procedural 28: remapped — 28 -> 12 (68%) «Недопустимые доказательства»
+  procedural 19: unresolved — лучшее 34%
+  procedural 20: remapped — 20 -> 18 (43%, слабо) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 17 (45%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 67 (67%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: remapped — 18 -> 67 (39%, слабо) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 40.5: unresolved — лучшее 30%
+  procedural 40: remapped — 40 -> 32 (59%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 32 (50%) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 33%
+  procedural 27: remapped — 27 -> 6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (44%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 67 (43%, слабо) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 46: unresolved — лучшее 30%
+  procedural 45: unresolved — лучшее 29%
+  procedural 47: unresolved — лучшее 33%
+  procedural 49: unresolved — лучшее 23%
+  procedural 38: remapped — 38 -> 17 (40%, слабо) «Порядок задержания правомочным лицом»
+  procedural 39: unresolved — лучшее 26%
+  traffic 8: remapped — 8 -> 2.1 (45%, слабо) «Проверка товаросопроводительных документов»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 16%
+  traffic 11.2: unresolved — лучшее 22%
+  traffic 72: unresolved — лучшее 34%
+  traffic 74: unresolved — лучшее 24%
+  traffic 74.2: unresolved — лучшее 13%
+  traffic 74.3: unresolved — лучшее 33%
+  traffic 82: unresolved — лучшее 31%
+  traffic 83: unresolved — лучшее 25%
+
+=== boston: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:4 remapped:1 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ~ lawyer-detention-grounds   confident:2 remapped:3 unresolved:0
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:6 remapped:1 unresolved:2
+  ✗ drunk-driver               confident:1 remapped:2 unresolved:1
+  ~ drugs-found                confident:3 remapped:4 unresolved:0
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:3 remapped:3 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:2 unresolved:5
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:4 unresolved:5
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:2 remapped:3 unresolved:1
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что Вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 12.8: remapped — 12.8 -> 12.9 (57%) «Незаконный оборот взрывчатых веществ или устройств»
+  criminal 17.10: remapped — 17.10 -> 18 (36%, слабо) [criminal -> procedural!] «Субъекты задержания»
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (80%) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (72%) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 5.7: remapped — 5.7 -> 5.13 (93%) «Нелегальные вещества»
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (41%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 34%
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: unresolved — лучшее 29%
+  criminal 5.9: remapped — 5.9 -> 32 (38%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 15%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «Похищение человека»
+  criminal 16.17: unresolved — лучшее 21%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (100%) «Незаконное проникновение и/или нахождение в соотве»
+  criminal 9.2: remapped — 9.2 -> 3.11 (62%) [criminal -> administrative!] «Незаконное проникновение в жилище, совершенное про»
+  criminal 9.4: remapped — 9.4 -> 3.12 (63%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 3.12 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 28%
+  procedural 28: remapped — 28 -> 12 (37%, слабо) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (53%) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 17 (35%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 61 (67%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 34%
+  procedural 40.5: unresolved — лучшее 33%
+  procedural 40: remapped — 40 -> 33 (57%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 33 (40%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 26%
+  procedural 27: remapped — 27 -> 6 (74%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (44%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: unresolved — лучшее 34%
+  procedural 46: unresolved — лучшее 32%
+  procedural 45: remapped — 45 -> 18 (51%) «Субъекты задержания»
+  procedural 47: remapped — 47 -> 51 (45%, слабо) «Допрос»
+  procedural 49: unresolved — лучшее 26%
+  procedural 38: remapped — 38 -> 18 (45%, слабо) «Субъекты задержания»
+  procedural 39: unresolved — лучшее 27%
+  traffic 8: remapped — 8 -> 1 (46%, слабо) «Водитель должен предъявить и передать по первому т»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (65%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 32%
+  traffic 72: remapped — 72 -> 58 (36%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 21%
+  traffic 74.2: unresolved — лучшее 20%
+  traffic 74.3: remapped — 74.3 -> 2.1 (36%, слабо) «Сотрудник для выполнения возложенных на полицию (р»
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 17%
+
+=== houston: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:4 remapped:1 unresolved:1
+  ✗ miranda                    confident:3 remapped:0 unresolved:1
+  ~ lawyer-detention-grounds   confident:2 remapped:3 unresolved:0
+  ✗ search-legality            confident:3 remapped:0 unresolved:2
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:6 remapped:0 unresolved:3
+  ✗ drunk-driver               confident:1 remapped:2 unresolved:1
+  ~ drugs-found                confident:3 remapped:4 unresolved:0
+  ✗ use-of-force               confident:1 remapped:4 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:3 remapped:3 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:2 unresolved:5
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:2 remapped:1 unresolved:3
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что Вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 12.8: remapped — 12.8 -> 12.9 (57%) «Незаконный оборот взрывчатых веществ или устройств»
+  criminal 17.10: unresolved — лучшее 32%
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (80%) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (72%) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «Незаконные приобретение, хранение, перевозка нарко»
+  criminal 5.7: remapped — 5.7 -> 5.13 (93%) «Нелегальные вещества»
+  criminal 15.1: remapped — 15.1 -> 15.1.1 (76%) «Превышение должностных полномочий»
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (41%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 35%
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: unresolved — лучшее 29%
+  criminal 5.9: remapped — 5.9 -> 32 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 15%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «Похищение человека»
+  criminal 16.17: unresolved — лучшее 21%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (100%) «Незаконное проникновение и/или нахождение в соотве»
+  criminal 9.2: remapped — 9.2 -> 3.11 (62%) [criminal -> administrative!] «Незаконное проникновение в жилище, совершенное про»
+  criminal 9.4: remapped — 9.4 -> 3.12 (64%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 3.12 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 28%
+  procedural 28: unresolved — лучшее 34%
+  procedural 20: remapped — 20 -> 18 (52%) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 17 (38%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 61 (67%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 33%
+  procedural 40.5: unresolved — лучшее 29%
+  procedural 40: remapped — 40 -> 33 (57%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 33 (36%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 26%
+  procedural 27: remapped — 27 -> 6 (74%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (45%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: unresolved — лучшее 33%
+  procedural 46: unresolved — лучшее 34%
+  procedural 45: remapped — 45 -> 18 (50%, слабо) «Субъекты задержания»
+  procedural 47: remapped — 47 -> 51 (45%, слабо) «Допрос»
+  procedural 49: unresolved — лучшее 26%
+  procedural 38: remapped — 38 -> 17 (40%, слабо) «Порядок задержания правомочным лицом»
+  procedural 39: unresolved — лучшее 27%
+  traffic 8: remapped — 8 -> 1 (46%, слабо) «Водитель должен предъявить и передать по первому т»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (65%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 32%
+  traffic 72: remapped — 72 -> 58 (36%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 33%
+  traffic 74.2: unresolved — лучшее 19%
+  traffic 74.3: remapped — 74.3 -> 2.1 (36%, слабо) «Сотрудник для выполнения возложенных на полицию (р»
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 17%
+
+=== seattle: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:2 unresolved:1
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:3 unresolved:1
+  ✗ pursuit-code6              confident:4 remapped:4 unresolved:1
+  ~ drunk-driver               confident:1 remapped:6 unresolved:0
+  ✗ drugs-found                confident:4 remapped:2 unresolved:1
+  ~ use-of-force               confident:2 remapped:5 unresolved:0
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ~ bribe-offer                confident:5 remapped:2 unresolved:0
+  ~ detainee-injured           confident:2 remapped:2 unresolved:0
+  ✗ crowd-interference         confident:1 remapped:1 unresolved:4
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ~ dtp-response               confident:1 remapped:7 unresolved:0
+  ✗ vehicle-impound            confident:0 remapped:4 unresolved:3
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:8 unresolved:1
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ~ hostage-situation          confident:2 remapped:3 unresolved:0
+  ✗ suspect-escape             confident:2 remapped:1 unresolved:3
+  ~ restricted-area            confident:1 remapped:4 unresolved:0
+  ✗ press-on-scene             confident:1 remapped:2 unresolved:1
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 17.10: unresolved — лучшее 27%
+  criminal 13.2: remapped — 13.2 -> 13.3 (73%) «★★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Незаконные приобре»
+  criminal 13.5: remapped — 13.5 -> 13.2 (46%, слабо) «★★★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Незаконный сбыт, »
+  criminal 5.7: unresolved — лучшее 25%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (43%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.2 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: remapped — 15.8 -> 17.4 (59%) «★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ) Провокация государс»
+  criminal 17.8: unresolved — лучшее 21%
+  criminal 5.8: unresolved — лучшее 35%
+  criminal 5.9: remapped — 5.9 -> 33 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 20%
+  criminal 12.3: remapped — 12.3 -> 7.1 (61%) «★★★★★ (ФЕДЕРАЛЬНЫЙ) Похищение человека, то есть ег»
+  criminal 16.17: unresolved — лучшее 27%
+  criminal 12.7: remapped — 12.7 -> 12.7 (45%, слабо) «★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ)»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (45%, слабо) «★★★ (ФЕДЕРАЛЬНЫЙ/РЕГИОНАЛЬНЫЙ)»
+  criminal 9.2: remapped — 9.2 -> 3.11 (62%) [criminal -> administrative!] «Незаконное проникновение в жилище, совершенное про»
+  criminal 9.4: remapped — 9.4 -> 3.12 (63%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 3.12 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 23%
+  procedural 28: remapped — 28 -> 12 (68%) «Недопустимые доказательства»
+  procedural 20: unresolved — лучшее 34%
+  procedural 22: remapped — 22 -> 17 (41%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 78 (70%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: remapped — 18 -> 20 (37%, слабо) «Основания освобождения подозреваемого»
+  procedural 40.5: remapped — 40.5 -> 36 (36%, слабо) «Стадии применения силы»
+  procedural 40: remapped — 40 -> 36 (63%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 36 (48%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 26%
+  procedural 27: remapped — 27 -> 6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (45%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (44%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: remapped — 46 -> 6 (38%, слабо) [procedural -> traffic!] «В настоящих правилах применяются следующие основны»
+  procedural 45: remapped — 45 -> 56 (44%, слабо) «Допрос»
+  procedural 47: remapped — 47 -> 56 (45%, слабо) «Допрос»
+  procedural 49: unresolved — лучшее 24%
+  procedural 38: remapped — 38 -> 36 (36%, слабо) «Стадии применения силы»
+  procedural 39: unresolved — лучшее 27%
+  traffic 7: remapped — 7 -> 8 (100%) «Водитель обязан остановиться по первому требованию»
+  traffic 8: remapped — 8 -> 9 (100%) «Водитель обязан по требованию сотрудника правоохра»
+  traffic 12: remapped — 12 -> 13 (85%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.1: remapped — 12.1 -> 13.1 (100%) «Водителю запрещается управлять транспортным средст»
+  traffic 12.2: remapped — 12.2 -> 65 (35%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 6: remapped — 6 -> 7 (100%) «Водитель обязан предъявить и передать сотруднику п»
+  traffic 9: remapped — 9 -> 10 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 11 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: remapped — 11 -> 12 (100%) «Если в результате аварии причинен вред только имущ»
+  traffic 11.2: remapped — 11.2 -> 12.2 (100%) «Если водители не договорились о том, кто виновник »
+  traffic 72: remapped — 72 -> 63 (38%, слабо) «Понятие Трафик-стопа»
+  traffic 74: remapped — 74 -> 65 (48%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 74.2: unresolved — лучшее 24%
+  traffic 74.3: remapped — 74.3 -> 65 (38%, слабо) «Порядок проведения Трафик-стопа:»
+  traffic 82: unresolved — лучшее 20%
+  traffic 83: remapped — 83 -> 36 (42%, слабо) [traffic -> procedural!] «Стадии применения силы»
+
+=== phoenix: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:2 remapped:0 unresolved:4
+  ✗ miranda                    confident:1 remapped:1 unresolved:2
+  ✗ lawyer-detention-grounds   confident:0 remapped:3 unresolved:2
+  ✗ search-legality            confident:1 remapped:1 unresolved:4
+  ✗ detention-time             confident:0 remapped:0 unresolved:5
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:5 remapped:1 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ✗ self-defense-claim         confident:3 remapped:1 unresolved:2
+  ✗ bribe-offer                confident:4 remapped:2 unresolved:1
+  ✗ detainee-injured           confident:1 remapped:1 unresolved:2
+  ~ crowd-interference         confident:0 remapped:6 unresolved:0
+  ✗ traffic-stop               confident:5 remapped:1 unresolved:1
+  ✗ dtp-response               confident:6 remapped:1 unresolved:1
+  ✗ vehicle-impound            confident:0 remapped:3 unresolved:4
+  ✗ arrest-warrant             confident:1 remapped:0 unresolved:4
+  ✗ interrogation              confident:0 remapped:5 unresolved:4
+  ✗ bail-release               confident:0 remapped:3 unresolved:4
+  ✗ hostage-situation          confident:3 remapped:0 unresolved:2
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ~ restricted-area            confident:3 remapped:2 unresolved:0
+  ~ press-on-scene             confident:2 remapped:2 unresolved:0
+Миранда: взята из procedural 2.9: «Вы имеете право хранить молчание. Всё, что Вы скажете, может быть и будет исполь…»
+
+Карта переносов (не-confident):
+  criminal 17.5: remapped — 17.5 -> 17.6 (90%) «Неподчинение законным требованиям сотрудника Федер»
+  criminal 6.4: remapped — 6.4 -> 8.2 (81%) «Насильственные действия сексуального характера пов»
+  criminal 13.2: remapped — 13.2 -> 13.3 (88%) «Незаконное хранение, приобретение, перевозка нарко»
+  criminal 13.5: remapped — 13.5 -> 13.7 (38%, слабо) «Незаконный сбыт и распространение наркотических ср»
+  criminal 5.7: remapped — 5.7 -> 5.6 (60%) «Найденные наркотические вещества, относящиеся к ка»
+  criminal 15.8: remapped — 15.8 -> 17.11 (40%, слабо) «Провокация сотрудников SANG, равно как помеха несе»
+  criminal 17.8: remapped — 17.8 -> 17.10 (62%) «Незаконная помеха при задержании, аресте или проце»
+  criminal 5.8: unresolved — лучшее 34%
+  criminal 5.9: remapped — 5.9 -> 5.8 (100%) «Стоимость выхода под залог регламентирует настоящи»
+  criminal 5.11: remapped — 5.11 -> 5.9 (71%) «Причины, по которым лицу отказывается в праве выхо»
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (86%) «Незаконное проникновение и/или нахождение на закры»
+  procedural 14: unresolved — лучшее 33%
+  procedural 16: unresolved — лучшее 31%
+  procedural 17: unresolved — лучшее 23%
+  procedural 25: unresolved — лучшее 26%
+  procedural 28: remapped — 28 -> 5.2 (64%) «Недопустимые доказательства»
+  procedural 19: unresolved — лучшее 19%
+  procedural 20: remapped — 20 -> 2.10 (44%, слабо) «Субъекты задержания и ареста»
+  procedural 22: remapped — 22 -> 2.6 (37%, слабо) «В рамках данного контекста допускается внесение из»
+  procedural 24: unresolved — лучшее 24%
+  procedural 3: unresolved — лучшее 12%
+  procedural 18: unresolved — лучшее 22%
+  procedural 40.5: unresolved — лучшее 26%
+  procedural 40: remapped — 40 -> 9.1 (89%) «Стадии применения силы - последовательность и клас»
+  procedural 42: remapped — 42 -> 9.3 (81%) «Стадии применения силы должны соблюдаться в порядк»
+  procedural 15: unresolved — лучшее 24%
+  procedural 27: remapped — 27 -> 5.1 (95%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 2.12 (47%, слабо) «Обязанности сотрудника выполняющего задержание и (»
+  procedural 44: remapped — 44 -> 2.2 (43%, слабо) «В рамках процесса задержания адвокат имеет право о»
+  procedural 46: unresolved — лучшее 31%
+  procedural 45: remapped — 45 -> 2.10 (46%, слабо) «Субъекты задержания и ареста»
+  procedural 47: remapped — 47 -> 10.7 (87%) «Права участников допроса»
+  procedural 49: unresolved — лучшее 17%
+  procedural 38: unresolved — лучшее 32%
+  procedural 39: unresolved — лучшее 18%
+  traffic 12.2: unresolved — лучшее 34%
+  traffic 72: unresolved — лучшее 20%
+  traffic 74: remapped — 74 -> 62 (42%, слабо) «Порядок проведения трафик-стопа:»
+  traffic 74.2: unresolved — лучшее 22%
+  traffic 74.3: remapped — 74.3 -> 62 (47%, слабо) «Порядок проведения трафик-стопа:»
+  traffic 82: unresolved — лучшее 29%
+  traffic 83: remapped — 83 -> 17 (41%, слабо) «Управление транспортным средством без номерных зна»
+
+=== denver: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:1 unresolved:2
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:3 remapped:0 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ~ document-check             confident:1 remapped:3 unresolved:0
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ~ traffic-stop               confident:2 remapped:5 unresolved:0
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:2 unresolved:5
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (77%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (71%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (42%, слабо) «★★★★ [Федеральная/Региональная]Незаконные приобрет»
+  criminal 5.7: unresolved — лучшее 14%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (42%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 35%
+  criminal 17.8: unresolved — лучшее 19%
+  criminal 5.8: remapped — 5.8 -> 17 (44%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 34 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 17%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 16.17: unresolved — лучшее 26%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (80%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 21%
+  criminal 9.4: remapped — 9.4 -> 6.6 (67%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 6.6 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 29%
+  procedural 28: remapped — 28 -> 12 (68%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (38%, слабо) «Субъекты задержания»
+  procedural 22: unresolved — лучшее 26%
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 79 (68%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 32%
+  procedural 40.5: unresolved — лучшее 27%
+  procedural 40: remapped — 40 -> 37 (53%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 37 (46%, слабо) «Стадии применения силы»
+  procedural 15: remapped — 15 -> 16 (38%, слабо) «Задержание подозреваемого»
+  procedural 27: remapped — 27 -> 6 (95%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (36%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (39%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: unresolved — лучшее 32%
+  procedural 45: remapped — 45 -> 18 (51%) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 25%
+  procedural 49: unresolved — лучшее 20%
+  procedural 38: unresolved — лучшее 34%
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 18%
+  traffic 74.2: unresolved — лучшее 25%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 32%
+
+=== portland: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:1 unresolved:2
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:5 remapped:2 unresolved:2
+  ✗ drunk-driver               confident:3 remapped:0 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:2 remapped:4 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:2 unresolved:5
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (77%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (71%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «★★★★ [Федеральная/Региональная]Незаконные приобрет»
+  criminal 5.7: unresolved — лучшее 14%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (42%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 35%
+  criminal 17.8: unresolved — лучшее 20%
+  criminal 5.8: remapped — 5.8 -> 17 (45%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 34 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 17%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 16.17: unresolved — лучшее 21%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (80%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 21%
+  criminal 9.4: remapped — 9.4 -> 6.6 (67%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 6.6 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 29%
+  procedural 28: remapped — 28 -> 12 (70%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (38%, слабо) «Субъекты задержания»
+  procedural 22: unresolved — лучшее 25%
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 79 (69%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 32%
+  procedural 40.5: unresolved — лучшее 28%
+  procedural 40: remapped — 40 -> 37 (55%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 37 (46%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 25%
+  procedural 27: remapped — 27 -> 6 (95%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (36%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (39%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: unresolved — лучшее 31%
+  procedural 45: remapped — 45 -> 18 (51%) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 26%
+  procedural 49: unresolved — лучшее 20%
+  procedural 38: unresolved — лучшее 33%
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 19%
+  traffic 74.2: unresolved — лучшее 10%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 28%
+  traffic 83: unresolved — лучшее 19%
+
+=== orlando: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ✗ lawyer-detention-grounds   confident:2 remapped:1 unresolved:2
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:4 remapped:3 unresolved:2
+  ✗ drunk-driver               confident:3 remapped:0 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ~ bribe-offer                confident:5 remapped:2 unresolved:0
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:3 unresolved:2
+  ✗ traffic-stop               confident:2 remapped:4 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:2 unresolved:5
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 17.1: remapped — 17.1 -> 16.2 (57%) «★★★★★ [Федеральная/Региональная]Угроза, а равно по»
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (77%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (71%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «★★★★ [Федеральная/Региональная]Незаконные приобрет»
+  criminal 5.7: unresolved — лучшее 14%
+  criminal 3.1: remapped — 3.1 -> 4 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4 (42%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.1 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: remapped — 15.8 -> 37 (35%, слабо) [criminal -> procedural!] «Стадии применения силы»
+  criminal 17.8: unresolved — лучшее 19%
+  criminal 5.8: remapped — 5.8 -> 17 (45%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 34 (39%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 17%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 16.17: unresolved — лучшее 21%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (65%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 21%
+  criminal 9.4: remapped — 9.4 -> 6.6 (66%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 6.6 (100%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 30%
+  procedural 28: remapped — 28 -> 12 (68%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (42%, слабо) «Субъекты задержания»
+  procedural 22: unresolved — лучшее 32%
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 100 (68%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 33%
+  procedural 40.5: unresolved — лучшее 27%
+  procedural 40: remapped — 40 -> 37 (52%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 37 (46%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 24%
+  procedural 27: remapped — 27 -> 6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (36%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (40%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: unresolved — лучшее 32%
+  procedural 45: remapped — 45 -> 18 (52%) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 25%
+  procedural 49: unresolved — лучшее 22%
+  procedural 38: unresolved — лучшее 35%
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (64%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 20%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 19%
+  traffic 74.2: unresolved — лучшее 10%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 18%
+  traffic 83: unresolved — лучшее 19%
+
+=== memphis: адаптация сценариев (24) ===
+  ✗ weapon-on-back             confident:5 remapped:0 unresolved:1
+  ~ miranda                    confident:3 remapped:1 unresolved:0
+  ~ lawyer-detention-grounds   confident:2 remapped:3 unresolved:0
+  ✗ search-legality            confident:3 remapped:1 unresolved:1
+  ✗ detention-time             confident:1 remapped:1 unresolved:3
+  ✗ pursuit-code6              confident:4 remapped:3 unresolved:2
+  ✗ drunk-driver               confident:1 remapped:2 unresolved:1
+  ✗ drugs-found                confident:3 remapped:3 unresolved:1
+  ✗ use-of-force               confident:2 remapped:3 unresolved:2
+  ✗ document-check             confident:1 remapped:1 unresolved:2
+  ~ self-defense-claim         confident:2 remapped:4 unresolved:0
+  ✗ bribe-offer                confident:5 remapped:1 unresolved:1
+  ✗ detainee-injured           confident:2 remapped:1 unresolved:1
+  ✗ crowd-interference         confident:1 remapped:2 unresolved:3
+  ✗ traffic-stop               confident:1 remapped:5 unresolved:1
+  ✗ dtp-response               confident:1 remapped:3 unresolved:3
+  ✗ vehicle-impound            confident:0 remapped:1 unresolved:6
+  ✗ arrest-warrant             confident:4 remapped:0 unresolved:1
+  ✗ interrogation              confident:0 remapped:3 unresolved:6
+  ✗ bail-release               confident:0 remapped:4 unresolved:3
+  ✗ hostage-situation          confident:2 remapped:2 unresolved:1
+  ✗ suspect-escape             confident:4 remapped:1 unresolved:1
+  ✗ restricted-area            confident:3 remapped:1 unresolved:1
+  ~ press-on-scene             confident:1 remapped:3 unresolved:0
+Миранда: взята из procedural 17: «Вы имеете право хранить молчание. Всё, что вы скажете, может и будет использован…»
+
+Карта переносов (не-confident):
+  criminal 17.1: remapped — 17.1 -> 16.2 (57%) «★★★★★ [Федеральная/Региональная] Угроза, а равно п»
+  criminal 13.2: remapped — 13.2 -> 13.2.1 (78%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.3: remapped — 13.3 -> 13.2.1 (71%) «★★★★★ [Федеральная/Региональная] Незаконные приобр»
+  criminal 13.5: remapped — 13.5 -> 13.2 (41%, слабо) «★★★★ [Федеральная/Региональная] Незаконные приобре»
+  criminal 5.7: unresolved — лучшее 14%
+  criminal 3.1: remapped — 3.1 -> 4.1 (45%, слабо) «Необходимая оборона»
+  criminal 3.2: remapped — 3.2 -> 4.1 (45%, слабо) «Необходимая оборона»
+  criminal 3.3: remapped — 3.3 -> 4.2 (100%) «Причинение вреда при задержании лица, совершившего»
+  criminal 15.8: unresolved — лучшее 35%
+  criminal 17.8: unresolved — лучшее 19%
+  criminal 5.8: remapped — 5.8 -> 17 (35%, слабо) [criminal -> procedural!] «Порядок задержания правомочным лицом»
+  criminal 5.9: remapped — 5.9 -> 34 (38%, слабо) [criminal -> procedural!] «Выпуск под залог»
+  criminal 5.11: unresolved — лучшее 14%
+  criminal 12.3: remapped — 12.3 -> 7.1 (45%, слабо) «★★★★★ [Федеральная] Похищение человека»
+  criminal 16.17: unresolved — лучшее 20%
+  criminal 12.7.1: remapped — 12.7.1 -> 12.7 (68%) «[Федеральная/Региональная] Незаконное проникновени»
+  criminal 9.2: unresolved — лучшее 22%
+  criminal 9.4: remapped — 9.4 -> 35 (50%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  criminal 9.5: remapped — 9.5 -> 35 (88%) [criminal -> administrative!] «Воспрепятствование законной профессиональной деяте»
+  procedural 17: unresolved — лучшее 28%
+  procedural 28: remapped — 28 -> 12 (73%) «Недопустимые доказательства»
+  procedural 20: remapped — 20 -> 18 (48%, слабо) «Субъекты задержания»
+  procedural 22: remapped — 22 -> 17 (43%, слабо) «Порядок задержания правомочным лицом»
+  procedural 24: dropped — override: аналога нет
+  procedural 3: remapped — 3 -> 78 (68%) «Основные понятия, используемые в настоящем Кодексе»
+  procedural 18: unresolved — лучшее 34%
+  procedural 40.5: unresolved — лучшее 31%
+  procedural 40: remapped — 40 -> 37 (51%) «Стадии применения силы»
+  procedural 42: remapped — 42 -> 37 (42%, слабо) «Стадии применения силы»
+  procedural 15: unresolved — лучшее 25%
+  procedural 27: remapped — 27 -> 6 (96%) «Презумпция невиновности»
+  procedural 21: remapped — 21 -> 17 (36%, слабо) «Порядок задержания правомочным лицом»
+  procedural 44: remapped — 44 -> 17 (40%, слабо) «Порядок задержания правомочным лицом»
+  procedural 46: unresolved — лучшее 27%
+  procedural 45: remapped — 45 -> 18 (49%, слабо) «Субъекты задержания»
+  procedural 47: unresolved — лучшее 23%
+  procedural 49: unresolved — лучшее 19%
+  procedural 38: remapped — 38 -> 18 (38%, слабо) «Субъекты задержания»
+  procedural 39: unresolved — лучшее 26%
+  traffic 7: remapped — 7 -> 2 (84%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 8: remapped — 8 -> 2 (51%) «Водитель обязан остановиться по требованию сотрудн»
+  traffic 12: dropped — override: аналога нет
+  traffic 12.1: dropped — override: аналога нет
+  traffic 12.2: dropped — override: аналога нет
+  traffic 6: remapped — 6 -> 1 (65%) «Водитель должен предъявить и передать по первому т»
+  traffic 9: remapped — 9 -> 4 (100%) «При аварии, водитель обязан остановиться и не трог»
+  traffic 10: remapped — 10 -> 5 (100%) «При аварии в которой погибли или ранены люди, води»
+  traffic 11: unresolved — лучшее 15%
+  traffic 11.2: unresolved — лучшее 10%
+  traffic 72: remapped — 72 -> 58 (37%, слабо) «В целях пресечения нарушений правил дорожного движ»
+  traffic 74: unresolved — лучшее 18%
+  traffic 74.2: unresolved — лучшее 13%
+  traffic 74.3: unresolved — лучшее 19%
+  traffic 82: unresolved — лучшее 21%
+  traffic 83: unresolved — лучшее 18%
