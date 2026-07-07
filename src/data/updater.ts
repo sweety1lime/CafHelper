@@ -1,9 +1,8 @@
 import { cacheKey } from "./loader";
 
-// Базовый URL репозитория с данными, например:
-// "https://raw.githubusercontent.com/<user>/cafhelper-data/main"
+// Базовый URL репозитория с данными (raw-доступ к main-ветке).
 // Пустая строка — обновления выключены, используются вшитые в сборку данные.
-export const DATA_BASE_URL = "";
+export const DATA_BASE_URL = "https://raw.githubusercontent.com/sweety1lime/CafHelper/main";
 
 const DATA_FILES = ["criminal", "procedural", "administrative", "traffic", "laws", "scenarios"];
 
