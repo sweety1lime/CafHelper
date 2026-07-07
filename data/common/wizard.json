@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "root": "start",
+  "nodes": [
+    {
+      "id": "start",
+      "question": "Что происходит?",
+      "options": [
+        { "id": "arrest", "label": "Задержание", "next": "arrest-basis" },
+        { "id": "search", "label": "Обыск", "next": "search-target" },
+        { "id": "pursuit", "label": "Погоня", "next": "pursuit-kind" },
+        { "id": "traffic", "label": "Остановка ТС", "next": "traffic-kind" },
+        { "id": "weapon", "label": "Оружие", "next": "weapon-kind" },
+        {
+          "id": "drugs",
+          "label": "Наркотики",
+          "answer": {
+            "title": "Найдены наркотики",
+            "scenarioIds": ["drugs-found"],
+            "tips": ["Граммовка решает квалификацию — взвесь и зафиксируй на камеру до оформления."]
+          }
+        },
+        {
+          "id": "bribe",
+          "label": "Взятка",
+          "answer": {
+            "title": "Предлагают взятку",
+            "scenarioIds": ["bribe-offer"],
+            "tips": ["Не соглашайся и не торгуйся даже в шутку — фиксируй предложение на камеру сразу."]
+          }
+        },
+        { "id": "detainee", "label": "Задержанный требует…", "next": "detainee-demand" },
+        { "id": "bystanders", "label": "Мешают люди", "next": "bystanders-who" }
+      ]
+    },
+    {
+      "id": "arrest-basis",
+      "question": "На каком основании задерживаешь?",
+      "options": [
+        {
+          "id": "caught",
+          "label": "Застигнут на месте",
+          "answer": {
+            "title": "Задержание: застигнут на месте",
+            "scenarioIds": ["miranda"],
+            "tips": ["Назови основание задержания вслух на камеру, затем Миранда — сразу после наручников."],
+            "phraseLabels": ["Представиться", "Миранда (задержание)"]
+          }
+        },
+        {
+          "id": "warrant",
+          "label": "По ордеру / розыску",
+          "answer": {
+            "title": "Задержание по ордеру или ориентировке",
+            "scenarioIds": ["arrest-warrant"],
+            "phraseLabels": ["Миранда (ордер/суд)"]
+          }
+        },
+        {
+          "id": "resists",
+          "label": "Сопротивляется",
+          "answer": {
+            "title": "Задержанный сопротивляется",
+            "scenarioIds": ["use-of-force", "suspect-escape"],
+            "tips": ["Сила — по стадиям, без перепрыгивания: сопротивление без оружия не повод для ствола."]
+          }
+        },
+        {
+          "id": "grounds",
+          "label": "Адвокат требует основания",
+          "answer": {
+            "title": "Адвокат требует основания задержания",
+            "scenarioIds": ["lawyer-detention-grounds", "detention-time"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "search-target",
+      "question": "Что обыскиваешь?",
+      "options": [
+        {
+          "id": "person",
+          "label": "Гражданина",
+          "answer": {
+            "title": "Личный обыск",
+            "scenarioIds": ["search-legality"],
+            "tips": ["Сначала основание вслух, потом руки: обыск «на всякий случай» разваливает дело."]
+          }
+        },
+        {
+          "id": "vehicle",
+          "label": "Транспорт",
+          "answer": {
+            "title": "Обыск транспортного средства",
+            "scenarioIds": ["search-legality", "traffic-stop"]
+          }
+        },
+        {
+          "id": "house",
+          "label": "Жилище",
+          "answer": {
+            "title": "Обыск жилища",
+            "scenarioIds": ["search-legality", "arrest-warrant"],
+            "tips": ["Для жилища почти всегда нужен ордер на обыск — проверь его тип и подпись до входа."]
+          }
+        }
+      ]
+    },
+    {
+      "id": "pursuit-kind",
+      "question": "Какая погоня?",
+      "options": [
+        {
+          "id": "vehicle-flee",
+          "label": "Не останавливается (код-6)",
+          "answer": {
+            "title": "Погоня за ТС (код-6)",
+            "scenarioIds": ["pursuit-code6"],
+            "phraseLabels": ["Требование остановиться"]
+          }
+        },
+        {
+          "id": "foot-flee",
+          "label": "Сбежал / вырвался",
+          "answer": {
+            "title": "Побег задержанного",
+            "scenarioIds": ["suspect-escape"]
+          }
+        },
+        {
+          "id": "drunk-flee",
+          "label": "Пьяный за рулём",
+          "answer": {
+            "title": "Нетрезвый водитель уходит от остановки",
+            "scenarioIds": ["drunk-driver", "pursuit-code6"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "traffic-kind",
+      "question": "Что с транспортом?",
+      "options": [
+        {
+          "id": "stop",
+          "label": "Обычная проверка",
+          "answer": {
+            "title": "Остановка и проверка ТС",
+            "scenarioIds": ["traffic-stop", "document-check"],
+            "phraseLabels": ["Требование остановиться", "Представиться"]
+          }
+        },
+        {
+          "id": "dui",
+          "label": "Пьяный водитель",
+          "answer": {
+            "title": "Нетрезвый водитель",
+            "scenarioIds": ["drunk-driver"]
+          }
+        },
+        {
+          "id": "accident",
+          "label": "ДТП",
+          "answer": {
+            "title": "Оформление ДТП",
+            "scenarioIds": ["dtp-response"]
+          }
+        },
+        {
+          "id": "impound",
+          "label": "Эвакуация",
+          "answer": {
+            "title": "Эвакуация ТС",
+            "scenarioIds": ["vehicle-impound"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "weapon-kind",
+      "question": "Что с оружием?",
+      "options": [
+        {
+          "id": "on-back",
+          "label": "Оружие на спине",
+          "answer": {
+            "title": "Открытое ношение оружия",
+            "scenarioIds": ["weapon-on-back"]
+          }
+        },
+        {
+          "id": "my-force",
+          "label": "Мне применять силу?",
+          "answer": {
+            "title": "Применение силы сотрудником",
+            "scenarioIds": ["use-of-force"],
+            "tips": ["Прежде чем стрелять, спроси себя: есть ли прямая угроза жизни прямо сейчас?"]
+          }
+        },
+        {
+          "id": "hostage",
+          "label": "Захват заложников",
+          "answer": {
+            "title": "Захват заложников",
+            "scenarioIds": ["hostage-situation"],
+            "phraseLabels": ["Отойти 10 метров"]
+          }
+        },
+        {
+          "id": "self-defense",
+          "label": "Ссылается на самооборону",
+          "answer": {
+            "title": "Заявление о самообороне",
+            "scenarioIds": ["self-defense-claim"]
+          }
+        }
+      ]
+    },
+    {
+      "id": "detainee-demand",
+      "question": "Что требует задержанный?",
+      "options": [
+        {
+          "id": "lawyer",
+          "label": "Адвоката / основания",
+          "answer": {
+            "title": "Требует адвоката или основания",
+            "scenarioIds": ["lawyer-detention-grounds"]
+          }
+        },
+        {
+          "id": "medic",
+          "label": "Медика",
+          "answer": {
+            "title": "Задержанный ранен или требует медика",
+            "scenarioIds": ["detainee-injured"]
+          }
+        },
+        {
+          "id": "bail",
+          "label": "Залог",
+          "answer": {
+            "title": "Выход под залог",
+            "scenarioIds": ["bail-release"]
+          }
+        },
+        {
+          "id": "time-up",
+          "label": "«Время вышло»",
+          "answer": {
+            "title": "Истекает время задержания",
+            "scenarioIds": ["detention-time", "interrogation"],
+            "tips": ["Допрос замораживает время задержания — фиксируй начало и конец на камеру."]
+          }
+        }
+      ]
+    },
+    {
+      "id": "bystanders-who",
+      "question": "Кто мешает?",
+      "options": [
+        {
+          "id": "crowd",
+          "label": "Зеваки / толпа",
+          "answer": {
+            "title": "Зеваки мешают работе",
+            "scenarioIds": ["crowd-interference"],
+            "phraseLabels": ["Отойти 10 метров"]
+          }
+        },
+        {
+          "id": "press",
+          "label": "Журналисты",
+          "answer": {
+            "title": "Журналисты на месте работы",
+            "scenarioIds": ["press-on-scene"]
+          }
+        },
+        {
+          "id": "trespasser",
+          "label": "Посторонний на территории",
+          "answer": {
+            "title": "Посторонний на закрытой территории",
+            "scenarioIds": ["restricted-area"]
+          }
+        }
+      ]
+    }
+  ]
+}

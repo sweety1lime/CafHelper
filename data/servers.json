@@ -1,0 +1,99 @@
+{
+  "servers": [
+    {
+      "id": "atlanta",
+      "name": "Atlanta",
+      "hasData": true
+    },
+    {
+      "id": "newyork",
+      "name": "New York",
+      "hasData": true
+    },
+    {
+      "id": "detroit",
+      "name": "Detroit",
+      "hasData": true
+    },
+    {
+      "id": "chicago",
+      "name": "Chicago",
+      "hasData": true
+    },
+    {
+      "id": "houston",
+      "name": "Houston",
+      "hasData": true
+    },
+    {
+      "id": "losangeles",
+      "name": "Los Angeles",
+      "hasData": true
+    },
+    {
+      "id": "lasvegas",
+      "name": "Las Vegas",
+      "hasData": true
+    },
+    {
+      "id": "miami",
+      "name": "Miami",
+      "hasData": true
+    },
+    {
+      "id": "sanfrancisco",
+      "name": "San Francisco",
+      "hasData": true
+    },
+    {
+      "id": "sandiego",
+      "name": "San Diego",
+      "hasData": true
+    },
+    {
+      "id": "washington",
+      "name": "Washington",
+      "hasData": true
+    },
+    {
+      "id": "boston",
+      "name": "Boston",
+      "hasData": true
+    },
+    {
+      "id": "seattle",
+      "name": "Seattle",
+      "hasData": true
+    },
+    {
+      "id": "dallas",
+      "name": "Dallas",
+      "hasData": true
+    },
+    {
+      "id": "denver",
+      "name": "Denver",
+      "hasData": true
+    },
+    {
+      "id": "portland",
+      "name": "Portland",
+      "hasData": true
+    },
+    {
+      "id": "phoenix",
+      "name": "Phoenix",
+      "hasData": true
+    },
+    {
+      "id": "orlando",
+      "name": "Orlando",
+      "hasData": true
+    },
+    {
+      "id": "memphis",
+      "name": "Memphis",
+      "hasData": true
+    }
+  ]
+}

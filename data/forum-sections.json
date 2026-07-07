@@ -1,0 +1,25 @@
+{
+  "updated": "2026-07-07",
+  "comment": "Ссылки на разделы законодательных баз предоставлены пользователем 2026-07-07 (названия разделов различаются: законодательная база / кодексы / НПА / одобренные законопроекты)",
+  "servers": [
+    { "id": "atlanta", "name": "Atlanta", "sectionUrl": "https://forum.majestic-rp.ru/forums/odobrennyye-zakonoproyekty.562/" },
+    { "id": "newyork", "name": "New York", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.84/" },
+    { "id": "detroit", "name": "Detroit", "sectionUrl": "https://forum.majestic-rp.ru/forums/kodeksy.353/" },
+    { "id": "chicago", "name": "Chicago", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.255/" },
+    { "id": "sanfrancisco", "name": "San Francisco", "sectionUrl": "https://forum.majestic-rp.ru/forums/odobrennyye-zakonoproyekty.344/" },
+    { "id": "sandiego", "name": "San Diego", "sectionUrl": "https://forum.majestic-rp.ru/forums/normativno-pravovyye-akty.580/" },
+    { "id": "losangeles", "name": "Los Angeles", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.693/" },
+    { "id": "miami", "name": "Miami", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.773/" },
+    { "id": "lasvegas", "name": "Las Vegas", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.820/" },
+    { "id": "washington", "name": "Washington", "sectionUrl": "https://forum.majestic-rp.ru/forums/odobrennyye-zakonoproyekty.895/" },
+    { "id": "dallas", "name": "Dallas", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.954/" },
+    { "id": "boston", "name": "Boston", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1017/" },
+    { "id": "houston", "name": "Houston", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1104/" },
+    { "id": "seattle", "name": "Seattle", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1163/" },
+    { "id": "phoenix", "name": "Phoenix", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1213/" },
+    { "id": "denver", "name": "Denver", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1276/" },
+    { "id": "portland", "name": "Portland", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1338/" },
+    { "id": "orlando", "name": "Orlando", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1405/" },
+    { "id": "memphis", "name": "Memphis", "sectionUrl": "https://forum.majestic-rp.ru/forums/zakonodatel-naya-baza.1471/" }
+  ]
+}
