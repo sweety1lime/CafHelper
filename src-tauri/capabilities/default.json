@@ -1,11 +1,12 @@
 {
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
-  "description": "Capability for the main window",
-  "windows": ["main"],
+  "description": "Права главного окна и окон пинов (pin-*)",
+  "windows": ["main", "pin-*"],
   "permissions": [
     "core:default",
     "opener:default",
+    "core:webview:allow-create-webview-window",
     "core:window:allow-show",
     "core:window:allow-hide",
     "core:window:allow-is-visible",
@@ -14,6 +15,7 @@
     "core:window:allow-set-always-on-top",
     "core:window:allow-minimize",
     "core:window:allow-close",
-    "clipboard-manager:allow-write-text"
+    "clipboard-manager:allow-write-text",
+    "window-state:default"
   ]
 }
