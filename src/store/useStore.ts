@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import type { Pin } from "../types";
 
 interface AppState {
   serverId: string | null;
@@ -10,6 +11,8 @@ interface AppState {
   favorites: string[];
   // калькулятор наказаний: подобранные статьи (id)
   calc: string[];
+  // закреплённый контент в отдельных мини-окнах (фразы, наборы статей)
+  pins: Pin[];
   // одноразовый тур при первом запуске пройден/пропущен
   onboardingDone: boolean;
   // кнопка «+» уже нажималась — сворачиваем подсказку «＋ срок» до компактной
@@ -20,6 +23,9 @@ interface AppState {
   toggleFavorite: (id: string) => void;
   toggleCalc: (id: string) => void;
   clearCalc: () => void;
+  addPin: (pin: Pin) => void;
+  updatePin: (id: string, patch: Partial<Pin>) => void;
+  removePin: (id: string) => void;
   setOnboardingDone: () => void;
 }
 
@@ -34,6 +40,7 @@ export const useStore = create<AppState>()(
       autoHide: false,
       favorites: [],
       calc: [],
+      pins: [],
       onboardingDone: false,
       calcHintSeen: false,
       setServer: (serverId) => set({ serverId }),
@@ -42,6 +49,12 @@ export const useStore = create<AppState>()(
       toggleFavorite: (id) => set((s) => ({ favorites: toggle(s.favorites, id) })),
       toggleCalc: (id) => set((s) => ({ calc: toggle(s.calc, id), calcHintSeen: true })),
       clearCalc: () => set({ calc: [] }),
+      addPin: (pin) => set((s) => ({ pins: [...s.pins, pin] })),
+      updatePin: (id, patch) =>
+        set((s) => ({
+          pins: s.pins.map((p) => (p.id === id ? ({ ...p, ...patch } as Pin) : p)),
+        })),
+      removePin: (id) => set((s) => ({ pins: s.pins.filter((p) => p.id !== id) })),
       setOnboardingDone: () => set({ onboardingDone: true }),
     }),
     { name: "cafhelper-settings" },

@@ -131,3 +131,27 @@ export interface ServerDataBundle {
   updated: string;
   draft: boolean;
 }
+
+// ── Пины: закреплённый контент в отдельном мини-окне со своим хоткеем ──
+
+// Снимок статьи для пина — самодостаточный, чтобы окну не грузить бандл сервера.
+// articleId хранится ради будущего «обновить снимок» из свежей базы.
+export interface PinnedArticle {
+  articleId: string;
+  ref: string; // готовая строка articleShortRef()
+  text?: string;
+  punishment?: string;
+}
+
+export interface PinBase {
+  id: string; // часть label окна (`pin-<id>`), уникальна
+  title: string;
+  hotkey?: string; // глобальный хоткей показа/скрытия; пусто = только вручную
+  autoHide?: boolean; // прятать при клике в игру (по умолчанию пины «липкие»)
+}
+
+export type Pin =
+  | (PinBase & { kind: "phrase"; text: string })
+  | (PinBase & { kind: "articles"; serverId: string; items: PinnedArticle[] });
+
+export type PinKind = Pin["kind"];
