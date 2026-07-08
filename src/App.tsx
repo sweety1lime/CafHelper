@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import { getServers, loadServerBundle } from "./data/loader";
 import type { ServerDataBundle } from "./types";
 import { SearchEngine } from "./search/engine";
-import { applyGlobalHotkey, hideOverlay } from "./overlay/hotkey";
+import { applyAllHotkeys, hideOverlay } from "./overlay/hotkey";
 import { useStore } from "./store/useStore";
 import { SearchView } from "./components/SearchView";
 import { CodexView } from "./components/CodexView";
@@ -23,9 +23,9 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 export default function App() {
-  const { serverId, hotkey, autoHide, setServer, onboardingDone } = useStore();
+  const { serverId, hotkey, autoHide, setServer, onboardingDone, pins } = useStore();
   const [tab, setTab] = useState<Tab>("search");
-  const [hotkeyError, setHotkeyError] = useState<string | null>(null);
+  const [hotkeyErrors, setHotkeyErrors] = useState<Record<string, string>>({});
   // инкремент заставляет перечитать данные после обновления базы
   const [dataRevision, setDataRevision] = useState(0);
 
@@ -51,8 +51,8 @@ export default function App() {
   const engine = useMemo(() => (bundle ? new SearchEngine(bundle) : null), [bundle]);
 
   useEffect(() => {
-    applyGlobalHotkey(hotkey).then(setHotkeyError);
-  }, [hotkey]);
+    applyAllHotkeys(hotkey, pins).then(setHotkeyErrors);
+  }, [hotkey, pins]);
 
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
@@ -140,7 +140,7 @@ export default function App() {
             {tab === "settings" && (
               <SettingsView
                 bundle={bundle}
-                hotkeyError={hotkeyError}
+                hotkeyErrors={hotkeyErrors}
                 onDataUpdated={() => setDataRevision((r) => r + 1)}
               />
             )}
