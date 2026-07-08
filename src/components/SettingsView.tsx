@@ -3,7 +3,8 @@ import { getServers } from "../data/loader";
 import { checkAndUpdate, DATA_BASE_URL, getLocalDataVersion } from "../data/updater";
 import { copyText } from "../lib/clipboard";
 import { useStore } from "../store/useStore";
-import type { ServerDataBundle } from "../types";
+import { destroyPinWindow, showPin } from "../overlay/pins";
+import type { Pin, ServerDataBundle } from "../types";
 
 // у Discord нет ссылки на профиль по нику — даём ник с копированием в один клик
 const FEEDBACK_DISCORD = "psychokid1488";
@@ -21,12 +22,12 @@ function eventToAccelerator(e: React.KeyboardEvent): string | null {
 
 interface Props {
   bundle: ServerDataBundle;
-  hotkeyError: string | null;
+  hotkeyErrors: Record<string, string>;
   onDataUpdated: () => void;
 }
 
-export function SettingsView({ bundle, hotkeyError, onDataUpdated }: Props) {
-  const { serverId, setServer, hotkey, setHotkey, autoHide, setAutoHide } = useStore();
+export function SettingsView({ bundle, hotkeyErrors, onDataUpdated }: Props) {
+  const { serverId, setServer, hotkey, setHotkey, autoHide, setAutoHide, pins } = useStore();
   const [updateStatus, setUpdateStatus] = useState<string | null>(null);
   const [checking, setChecking] = useState(false);
   const [feedbackCopied, setFeedbackCopied] = useState(false);
@@ -69,10 +70,13 @@ export function SettingsView({ bundle, hotkeyError, onDataUpdated }: Props) {
         />
         <p className="mt-1 text-xs text-neutral-500">
           Кликни в поле и нажми клавишу (например F9 или Ctrl+Shift+L). Работает даже когда игра
-          в фокусе.
+          в фокусе. Выбирай клавишу, не занятую в игре — надёжнее всего F6–F12 или сочетания с
+          Ctrl+Shift.
         </p>
-        {hotkeyError && (
-          <p className="mt-1 text-xs text-red-400">Не удалось зарегистрировать: {hotkeyError}</p>
+        {hotkeyErrors[hotkey] && (
+          <p className="mt-1 text-xs text-red-400">
+            Не удалось зарегистрировать: {hotkeyErrors[hotkey]}
+          </p>
         )}
       </section>
 
@@ -94,6 +98,35 @@ export function SettingsView({ bundle, hotkeyError, onDataUpdated }: Props) {
             монитора оставь выключенным.
           </span>
         </label>
+      </section>
+
+      <section>
+        <div className="mb-1.5 text-xs font-semibold uppercase tracking-wide text-neutral-500">
+          Пины — контент в отдельных окнах
+        </div>
+        {pins.length === 0 ? (
+          <p className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-neutral-500">
+            Пинов пока нет. Кнопка 📌 на быстрой фразе или в калькуляторе выносит контент в
+            отдельное окошко — назначь ему свободную клавишу, и оно будет всплывать поверх игры без
+            основного приложения.
+          </p>
+        ) : (
+          <>
+            <p className="mb-1.5 text-xs text-neutral-500">
+              Назначай пину клавишу, не занятую в игре — надёжнее всего F6–F12 или сочетания с
+              Ctrl+Shift.
+            </p>
+            <div className="space-y-1.5">
+              {pins.map((pin) => (
+                <PinRow
+                  key={pin.id}
+                  pin={pin}
+                  error={pin.hotkey ? hotkeyErrors[pin.hotkey] : undefined}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       <section>
@@ -170,6 +203,77 @@ export function SettingsView({ bundle, hotkeyError, onDataUpdated }: Props) {
         <br />
         Esc — скрыть оверлей. Окно можно таскать за шапку.
       </section>
+    </div>
+  );
+}
+
+// Строка управления одним пином: заголовок, хоткей, показать, удалить
+function PinRow({ pin, error }: { pin: Pin; error?: string }) {
+  const { updatePin, removePin } = useStore();
+  const [title, setTitle] = useState(pin.title);
+
+  return (
+    <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2">
+      <div className="flex items-center gap-2">
+        <span className="shrink-0 rounded bg-white/10 px-1.5 py-0.5 text-[10px] text-neutral-400">
+          {pin.kind === "phrase" ? "фраза" : "статьи"}
+        </span>
+        <input
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          onBlur={() => {
+            const t = title.trim();
+            if (t && t !== pin.title) updatePin(pin.id, { title: t });
+            else setTitle(pin.title);
+          }}
+          className="min-w-0 flex-1 rounded border border-white/10 bg-neutral-800 px-2 py-1 text-xs text-neutral-100 outline-none focus:border-sky-400/60"
+        />
+        <button
+          title="Показать окно"
+          onClick={() => void showPin(pin)}
+          className="shrink-0 rounded-md px-1.5 py-0.5 text-xs text-neutral-400 transition hover:bg-white/10 hover:text-white"
+        >
+          Показать
+        </button>
+        <button
+          title="Удалить пин"
+          onClick={() => {
+            void destroyPinWindow(pin.id);
+            removePin(pin.id);
+          }}
+          className="shrink-0 rounded-md px-1.5 py-0.5 text-xs text-neutral-400 transition hover:bg-red-500/20 hover:text-red-300"
+        >
+          🗑
+        </button>
+      </div>
+      <div className="mt-1.5 flex items-center gap-2">
+        <span className="text-[11px] text-neutral-500">Хоткей:</span>
+        <input
+          readOnly
+          value={pin.hotkey ?? ""}
+          onKeyDown={(e) => {
+            e.preventDefault();
+            const acc = eventToAccelerator(e);
+            if (acc) updatePin(pin.id, { hotkey: acc });
+          }}
+          placeholder="нажми клавишу…"
+          className="w-32 cursor-pointer rounded border border-white/10 bg-white/5 px-2 py-1 text-center text-xs font-semibold text-sky-300 outline-none focus:border-sky-400/60"
+        />
+        {pin.hotkey && (
+          <button
+            title="Убрать хоткей"
+            onClick={() => updatePin(pin.id, { hotkey: undefined })}
+            className="rounded-md px-1.5 py-0.5 text-xs text-neutral-400 transition hover:bg-white/10 hover:text-white"
+          >
+            ✕
+          </button>
+        )}
+      </div>
+      {error && (
+        <p className="mt-1 text-[11px] text-red-400">
+          Клавиша {pin.hotkey} не назначена: {error}
+        </p>
+      )}
     </div>
   );
 }
