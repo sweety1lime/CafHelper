@@ -155,3 +155,29 @@ export type Pin =
   | (PinBase & { kind: "articles"; serverId: string; items: PinnedArticle[] });
 
 export type PinKind = Pin["kind"];
+
+// ── Правила проекта (OOC/RP): ограбления, похищения, DM/RK/PG и т.п. ──
+// Общие для всех серверов, живут в data/common/rules.json.
+
+export interface Rule {
+  id: string;
+  code?: string; // номер пункта в правилах, напр. "5.1", "3.5"
+  title: string;
+  text: string; // дословный текст (определение + исключения/примечания)
+  punishment?: string; // мера: «Demorgan 120 мин / WARN / Ban 3-30 дней»
+  forOfficer?: string; // угол сотрудника: как реагировать / это жалоба
+  tags?: string[];
+}
+
+export interface RuleCategory {
+  id: string;
+  title: string;
+  source: string; // ссылка на тему форума с оригиналом
+  intro?: string;
+  rules: Rule[];
+}
+
+export interface RulesFile {
+  updated: string;
+  categories: RuleCategory[];
+}

@@ -2,6 +2,7 @@ import type {
   Article,
   CodexFile,
   CodexId,
+  RulesFile,
   ScenarioFile,
   ServerDataBundle,
   ServerInfo,
@@ -12,6 +13,7 @@ import { CODEX_IDS } from "../types";
 import serversJson from "../../data/servers.json";
 import synonymsJson from "../../data/common/synonyms.json";
 import wizardJson from "../../data/common/wizard.json";
+import rulesJson from "../../data/common/rules.json";
 
 // JSON серверов попадают в сборку отдельными чанками (glob без eager):
 // при ~18 серверах по ~1 МБ вшивать всё в главный чанк нельзя — грузится
@@ -33,6 +35,11 @@ export function getSynonymGroups(): SynonymGroup[] {
 // Дерево мастера ситуаций — общее для всех серверов (маленькое, вшито eager)
 export function getWizardTree(): WizardFile {
   return wizardJson as WizardFile;
+}
+
+// Правила проекта — общие для всех серверов (OOC/RP: ограбления, похищения, DM/RK/PG)
+export function getRules(): RulesFile {
+  return rulesJson as RulesFile;
 }
 
 export function cacheKey(serverId: string, file: string): string {
