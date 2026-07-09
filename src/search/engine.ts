@@ -1,5 +1,6 @@
 import MiniSearch from "minisearch";
-import type { Article, Scenario, ServerDataBundle } from "../types";
+import type { Article, Rule, Scenario, ServerDataBundle } from "../types";
+import { getRules } from "../data/loader";
 import { expandQuery, normalizeTerm, queryVariants } from "./normalize";
 
 // Результат с релевантностью: weak — совпадение сильно хуже лучшего,
@@ -11,12 +12,22 @@ export interface Scored<T> {
   matchedTerms: string[];
 }
 
+// Правило проекта, обогащённое категорией — для показа в общем поиске
+export interface RuleHit extends Rule {
+  docId: string; // `${categoryId}:${rule.id}` — уникально между категориями
+  categoryId: string;
+  categoryTitle: string;
+  source: string;
+}
+
 export interface SearchResults {
   scenarios: Scored<Scenario>[];
+  rules: Scored<RuleHit>[];
   articles: Scored<Article>[];
 }
 
 const MAX_SCENARIOS = 4;
+const MAX_RULES = 5;
 const MAX_ARTICLES = 15;
 // результат слабее WEAK_RATIO × (лучший score) считается мусорным
 const WEAK_RATIO = 0.25;
@@ -28,11 +39,30 @@ function extractField<T>(doc: T, fieldName: string): string {
   return value == null ? "" : String(value);
 }
 
+// Разворачиваем категории правил в плоский список для индексации
+function flattenRules(): RuleHit[] {
+  const out: RuleHit[] = [];
+  for (const cat of getRules().categories) {
+    for (const r of cat.rules) {
+      out.push({
+        ...r,
+        docId: `${cat.id}:${r.id}`,
+        categoryId: cat.id,
+        categoryTitle: cat.title,
+        source: cat.source,
+      });
+    }
+  }
+  return out;
+}
+
 export class SearchEngine {
   private articleIndex: MiniSearch<Article>;
   private scenarioIndex: MiniSearch<Scenario>;
+  private ruleIndex: MiniSearch<RuleHit>;
   private articleById = new Map<string, Article>();
   private scenarioById = new Map<string, Scenario>();
+  private ruleById = new Map<string, RuleHit>();
 
   constructor(bundle: ServerDataBundle) {
     this.articleIndex = new MiniSearch<Article>({
@@ -55,24 +85,40 @@ export class SearchEngine {
         prefix: true,
       },
     });
+    // правила общие для всех серверов; docId уникален между категориями
+    this.ruleIndex = new MiniSearch<RuleHit>({
+      idField: "docId",
+      fields: ["title", "text", "forOfficer", "tags", "code", "categoryTitle"],
+      extractField,
+      processTerm: normalizeTerm,
+      searchOptions: {
+        boost: { title: 4, tags: 4, categoryTitle: 2 },
+        fuzzy: 0.2,
+        prefix: true,
+      },
+    });
 
+    const rules = flattenRules();
     this.articleIndex.addAll(bundle.articles);
     this.scenarioIndex.addAll(bundle.scenarios);
+    this.ruleIndex.addAll(rules);
     for (const a of bundle.articles) this.articleById.set(a.id, a);
     for (const s of bundle.scenarios) this.scenarioById.set(s.id, s);
+    for (const r of rules) this.ruleById.set(r.docId, r);
   }
 
   search(query: string): SearchResults {
-    if (!query.trim()) return { scenarios: [], articles: [] };
+    if (!query.trim()) return { scenarios: [], rules: [], articles: [] };
     // ищем по исходному запросу и по варианту, перебитому из EN-раскладки,
     // затем сливаем результаты по лучшему score
     const variants = queryVariants(query)
       .map((v) => expandQuery(v))
       .filter((v) => v.trim());
-    if (variants.length === 0) return { scenarios: [], articles: [] };
+    if (variants.length === 0) return { scenarios: [], rules: [], articles: [] };
 
     return {
       scenarios: mergeSearch(this.scenarioIndex, variants, MAX_SCENARIOS, this.scenarioById),
+      rules: mergeSearch(this.ruleIndex, variants, MAX_RULES, this.ruleById),
       articles: mergeSearch(this.articleIndex, variants, MAX_ARTICLES, this.articleById),
     };
   }

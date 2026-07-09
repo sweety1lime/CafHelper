@@ -7,18 +7,20 @@ import { useStore } from "./store/useStore";
 import { SearchView } from "./components/SearchView";
 import { CodexView } from "./components/CodexView";
 import { ScenariosView } from "./components/ScenariosView";
+import { RulesView } from "./components/RulesView";
 import { SettingsView } from "./components/SettingsView";
 import { ServerPicker } from "./components/ServerPicker";
 import { CalcBar } from "./components/CalcBar";
 import { Onboarding } from "./components/Onboarding";
 import "./index.css";
 
-type Tab = "search" | "codex" | "scenarios" | "settings";
+type Tab = "search" | "codex" | "scenarios" | "rules" | "settings";
 
 const TABS: { id: Tab; label: string }[] = [
   { id: "search", label: "Поиск" },
   { id: "codex", label: "Кодексы" },
   { id: "scenarios", label: "Сценарии" },
+  { id: "rules", label: "Правила" },
   { id: "settings", label: "Настройки" },
 ];
 
@@ -137,6 +139,7 @@ export default function App() {
             {tab === "search" && <SearchView engine={engine} bundle={bundle} />}
             {tab === "codex" && <CodexView bundle={bundle} />}
             {tab === "scenarios" && <ScenariosView bundle={bundle} />}
+            {tab === "rules" && <RulesView />}
             {tab === "settings" && (
               <SettingsView
                 bundle={bundle}

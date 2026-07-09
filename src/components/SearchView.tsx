@@ -4,6 +4,7 @@ import type { SearchEngine } from "../search/engine";
 import { useStore } from "../store/useStore";
 import { ArticleCard } from "./ArticleCard";
 import { ScenarioCard } from "./ScenarioCard";
+import { RuleCard } from "./RulesView";
 import { QuickPhraseChip } from "./QuickPhraseChip";
 import { WizardPanel } from "./wizard/WizardPanel";
 
@@ -24,9 +25,10 @@ export function SearchView({
     [favorites, bundle],
   );
 
-  // слабые сценарии не показываем вовсе (статьи дают запасной путь),
+  // слабые сценарии/правила не показываем вовсе (статьи дают запасной путь),
   // слабые статьи прячем за разворачиваемым блоком
   const scenarios = results.scenarios.filter((s) => !s.weak);
+  const rules = results.rules.filter((r) => !r.weak);
   const strongArticles = results.articles.filter((a) => !a.weak);
   const weakArticles = results.articles.filter((a) => a.weak);
 
@@ -77,11 +79,14 @@ export function SearchView({
           </>
         )}
 
-        {hasQuery && scenarios.length === 0 && results.articles.length === 0 && (
-          <p className="mt-4 text-center text-xs text-neutral-500">
-            Ничего не найдено. Попробуй другие слова или загляни во вкладку «Кодексы».
-          </p>
-        )}
+        {hasQuery &&
+          scenarios.length === 0 &&
+          rules.length === 0 &&
+          results.articles.length === 0 && (
+            <p className="mt-4 text-center text-xs text-neutral-500">
+              Ничего не найдено. Попробуй другие слова или загляни во вкладку «Кодексы».
+            </p>
+          )}
 
         {scenarios.map((s) => (
           <ScenarioCard
@@ -90,6 +95,9 @@ export function SearchView({
             articles={bundle.articles}
             defaultOpen={scenarios.length === 1}
           />
+        ))}
+        {rules.map((r) => (
+          <RuleCard key={r.item.docId} rule={r.item} categoryTitle={r.item.categoryTitle} />
         ))}
         {strongArticles.map((a) => (
           <ArticleCard key={a.item.id} article={a.item} matchedTerms={a.matchedTerms} />
