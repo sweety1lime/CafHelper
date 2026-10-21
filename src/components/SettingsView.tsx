@@ -1,13 +1,12 @@
 import { useState } from "react";
+import { openUrl } from "@tauri-apps/plugin-opener";
 import { getServers } from "../data/loader";
 import { checkAndUpdate, DATA_BASE_URL, getLocalDataVersion } from "../data/updater";
-import { copyText } from "../lib/clipboard";
 import { useStore } from "../store/useStore";
 import { destroyPinWindow, showPin } from "../overlay/pins";
 import type { Pin, ServerDataBundle } from "../types";
 
-// у Discord нет ссылки на профиль по нику — даём ник с копированием в один клик
-const FEEDBACK_DISCORD = "psychokid1488";
+const FEEDBACK_URL = "https://github.com/sweety1lime/CafHelper/issues";
 
 // KeyboardEvent -> формат акселератора Tauri ("Ctrl+Alt+F9")
 function eventToAccelerator(e: React.KeyboardEvent): string | null {
@@ -30,7 +29,6 @@ export function SettingsView({ bundle, hotkeyErrors, onDataUpdated }: Props) {
   const { serverId, setServer, hotkey, setHotkey, autoHide, setAutoHide, pins } = useStore();
   const [updateStatus, setUpdateStatus] = useState<string | null>(null);
   const [checking, setChecking] = useState(false);
-  const [feedbackCopied, setFeedbackCopied] = useState(false);
   const servers = getServers();
 
   return (
@@ -176,20 +174,12 @@ export function SettingsView({ bundle, hotkeyErrors, onDataUpdated }: Props) {
         </div>
         <div className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-neutral-300">
           Нашёл ошибку в статье или сценарии — особенно на серверах с пометкой «черновик»?
-          Напиши в Discord:
+          Напиши в Issues на GitHub:
           <button
-            onClick={async () => {
-              await copyText(FEEDBACK_DISCORD);
-              setFeedbackCopied(true);
-              setTimeout(() => setFeedbackCopied(false), 1200);
-            }}
-            className={`ml-1.5 rounded border px-1.5 py-0.5 font-semibold transition ${
-              feedbackCopied
-                ? "border-emerald-500/50 bg-emerald-500/20 text-emerald-300"
-                : "border-sky-500/30 bg-sky-500/10 text-sky-200 hover:bg-sky-500/25"
-            }`}
+            onClick={() => void openUrl(FEEDBACK_URL).catch(() => {})}
+            className="ml-1.5 rounded border border-sky-500/30 bg-sky-500/10 px-1.5 py-0.5 font-semibold text-sky-200 transition hover:bg-sky-500/25"
           >
-            {feedbackCopied ? "✓ Скопировано" : `⧉ ${FEEDBACK_DISCORD}`}
+            Открыть Issues
           </button>
           <span className="mt-1 block text-neutral-500">
             Укажи сервер, статью/сценарий и что не так — исправление прилетит всем с обновлением
